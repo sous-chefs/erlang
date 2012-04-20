@@ -24,7 +24,7 @@ when "debian", "ubuntu"
   erlpkg = node[:erlang][:gui_tools] ? "erlang" : "erlang-nox"
   package erlpkg
   package "erlang-dev"
-when "redhat", "centos", "scientific"
+when "redhat", "centos", "scientific", "amazon"
   include_recipe "yum::epel"
   yum_repository "erlang" do
     name "EPELErlangrepo"
