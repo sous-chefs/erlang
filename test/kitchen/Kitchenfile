@@ -15,4 +15,8 @@
 # limitations under the License.
 #
 
-default['erlang']['gui_tools'] = false
+cookbook "erlang" do
+  configuration "default"
+  configuration "gui_tools"
+  exclude :platform => "centos", :configuration => "gui_tools"
+end

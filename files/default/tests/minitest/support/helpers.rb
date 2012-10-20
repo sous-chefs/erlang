@@ -1,4 +1,6 @@
 #
+# Cookbook:: erlang
+#
 # Author:: Joshua Timberman <joshua@opscode.com>
 # Copyright:: Copyright (c) 2012, Opscode, Inc. <legal@opscode.com>
 #
@@ -15,4 +17,13 @@
 # limitations under the License.
 #
 
-default['erlang']['gui_tools'] = false
+module Helpers
+  module Erlang
+    require 'chef/mixin/shell_out'
+    include Chef::Mixin::ShellOut
+    include MiniTest::Chef::Assertions
+    include MiniTest::Chef::Context
+    include MiniTest::Chef::Resources
+
+  end
+end
