@@ -1,4 +1,7 @@
 #
+# Cookbook:: erlang
+# Minitest Chef Handler
+#
 # Author:: Joshua Timberman <joshua@opscode.com>
 # Copyright:: Copyright (c) 2012, Opscode, Inc. <legal@opscode.com>
 #
@@ -15,4 +18,13 @@
 # limitations under the License.
 #
 
-default['erlang']['gui_tools'] = false
+require File.expand_path('../support/helpers', __FILE__)
+
+describe 'erlang::default' do
+  include Helpers::Erlang
+
+  it 'installs the x11 package if gui_tools is true' do
+    skip unless node['platform_family'] == 'debian'
+    package("erlang-gs").must_be_installed
+  end
+end
