@@ -3,7 +3,7 @@ GEM
   specs:
     archive-tar-minitar (0.5.2)
     bunny (0.7.9)
-    chef (10.14.4)
+    chef (10.16.2)
       bunny (>= 0.6.0, < 0.8.0)
       erubis
       highline (>= 1.6.9)
@@ -67,7 +67,7 @@ GEM
       net-ssh (>= 2.1.4)
       net-ssh-gateway (>= 0.99.0)
     nokogiri (1.5.0)
-    ohai (6.14.1)
+    ohai (6.14.0)
       ipaddress
       mixlib-cli
       mixlib-config
