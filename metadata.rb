@@ -7,6 +7,6 @@ depends           "yum", ">= 0.5.0"
 
 recipe "erlang", "Installs erlang"
 
-%w{ ubuntu debian redhat centos scientific }.each do |os|
+%w{ ubuntu debian redhat centos scientific amazon oracle }.each do |os|
   supports os
 end
