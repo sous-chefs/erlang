@@ -1,12 +1,7 @@
 Description
 ===========
 
-Manages installation of erlang packages. For Debian/Ubuntu this means
-the distro version of 'erlang'. For RHEL/CentOS this means following
-the recommendation of RabbitMQ.com and adds an updated version of
-erlang and access to the EPEL Yum repository.
-
-http://www.rabbitmq.com/server.html
+Manages installation of Erlang via packages or source.
 
 Requirements
 ============
@@ -21,7 +16,7 @@ Platform
 
 Tested on:
 
-* Ubuntu 10.04, 11.10
+* Ubuntu 10.04, 11.10, 12.04
 * Red Hat Enterprise Linux (CentOS/Amazon/Scientific/Oracle) 5.7, 6.2
 
 **Notes**: This cookbook has been tested on the listed platforms. It
@@ -31,12 +26,19 @@ Cookbooks
 ---------
 
 * yum (for epel recipe)
+* build-essential (for source compilation)
 
 Attributes
 ==========
 
 * `node['erlang']['gui_tools']` - whether to install the GUI tools for
   Erlang.
+* `node['erlang']['install_method'] - Erlang installation method ("package" or
+  "source").
+* `node['erlang']['source']['version'] - Version of Erlang/OTP to install from source.
+  "source")
+* `node['erlang']['source']['url'] - URL of Erlang/OTP source tarball.
+* `node['erlang']['source']['checksum'] - Checksum of the Erlang/OTP source tarball.
 
 Recipes
 =======
@@ -44,7 +46,7 @@ Recipes
 default
 -------
 
-Manages installation of erlang packages.
+Manages installation of Erlang.
 
 License and Author
 ==================
@@ -52,6 +54,7 @@ License and Author
 Author: Joe Williams (<joe@joetify.com>)
 Author: Joshua Timberman (<joshua@opscode.com>)
 Author: Matt Ray (<matt@opscode.com>)
+Author: Hector Castro (<hector@basho.com>)
 
 Copyright 2011-2012, Opscode, Inc.
 
