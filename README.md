@@ -6,13 +6,11 @@ Manages installation of Erlang via packages or source.
 Requirements
 ============
 
-Chef
-----
+## Chef
 
 Chef version 0.10.10+ and Ohai 0.6.12+ are required
 
-Platform
---------
+## Platform
 
 Tested on:
 
@@ -22,8 +20,7 @@ Tested on:
 **Notes**: This cookbook has been tested on the listed platforms. It
   may work on other platforms with or without modification.
 
-Cookbooks
----------
+## Cookbooks
 
 * yum (for epel recipe)
 * build-essential (for source compilation)
@@ -33,30 +30,38 @@ Attributes
 
 * `node['erlang']['gui_tools']` - whether to install the GUI tools for
   Erlang.
-* `node['erlang']['install_method'] - Erlang installation method ("package" or
+* `node['erlang']['install_method']` - Erlang installation method ("package" or
   "source").
-* `node['erlang']['source']['version'] - Version of Erlang/OTP to install from source.
+* `node['erlang']['source']['version']` - Version of Erlang/OTP to install from source.
   "source")
-* `node['erlang']['source']['url'] - URL of Erlang/OTP source tarball.
-* `node['erlang']['source']['checksum'] - Checksum of the Erlang/OTP source tarball.
+* `node['erlang']['source']['url']` - URL of Erlang/OTP source tarball.
+* `node['erlang']['source']['checksum']` - Checksum of the Erlang/OTP source tarball.
 
 Recipes
 =======
 
-default
--------
+## default
 
-Manages installation of Erlang.
+Manages installation of Erlang. Includes the package or source recipe
+depending on the value of `node['erlang']['install_method']`.
+
+## package
+
+Installs Erlang from distribution packages.
+
+## source
+
+Installs Erlang from source.
 
 License and Author
 ==================
 
-Author: Joe Williams (<joe@joetify.com>)
-Author: Joshua Timberman (<joshua@opscode.com>)
-Author: Matt Ray (<matt@opscode.com>)
-Author: Hector Castro (<hector@basho.com>)
+* Author: Joe Williams (<joe@joetify.com>)
+* Author: Joshua Timberman (<joshua@opscode.com>)
+* Author: Matt Ray (<matt@opscode.com>)
+* Author: Hector Castro (<hector@basho.com>)
 
-Copyright 2011-2012, Opscode, Inc.
+Copyright 2011-2013, Opscode, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
