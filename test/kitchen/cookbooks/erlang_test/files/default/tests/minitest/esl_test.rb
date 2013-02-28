@@ -1,6 +1,8 @@
 #
-# Author:: Joshua Timberman <joshua@opscode.com>
-# Copyright:: Copyright (c) 2012, Opscode, Inc. <legal@opscode.com>
+# Cookbook:: erlang_test
+# Minitest Chef Handler
+#
+# Copyright:: Copyright (c) 2013, Opscode, Inc. <legal@opscode.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,13 +16,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+require File.expand_path('../support/helpers', __FILE__)
 
-cookbook "erlang" do
-  configuration "default"
-  configuration "gui_tools"
-  configuration "source"
-  configuration "esl"
+describe_recipe 'erlang::erlang_solutions' do
+  include Helpers::Erlang
 
-  exclude :platform => "centos", :configuration => "gui_tools"
-  exclude :platform => "centos", :configuration => "esl"
+  it 'installs the esl-erlang package' do
+    package("esl-erlang").must_be_installed
+  end
+
+  it "can successfully run 'erl'" do
+    erl = shell_out("erl -myflag 1 <<-EOH
+init:get_argument(myflag).
+EOH
+")
+    assert_includes(erl.stdout,'{ok,[["1"]]}')
+  end
 end
