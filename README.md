@@ -38,6 +38,7 @@ Attributes
 * `node['erlang']['source']['checksum']` - Checksum of the Erlang/OTP source tarball.
 * `node['erlang']['esl']['version']` - version specifier for Erlang
   Solutions packages.
+* `node['erlang']['esl']['compat']` - the compat version to be installed along side esl-erlang 
 
 Recipes
 =======
