@@ -25,6 +25,10 @@ describe_recipe 'erlang::erlang_solutions' do
     package("esl-erlang").must_be_installed
   end
 
+it 'installs the erlang package' do
+    package("erlang").must_be_installed
+  end
+
   it "can successfully run 'erl'" do
     erl = shell_out("erl -myflag 1 <<-EOH
 init:get_argument(myflag).
