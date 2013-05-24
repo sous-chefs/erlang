@@ -26,7 +26,7 @@ describe_recipe 'erlang::erlang_solutions' do
   end
 
 it 'installs the erlang package' do
-    package("erlang").must_be_installed
+    package("esl-erlang-compat").must_be_installed
   end
 
   it "can successfully run 'erl'" do
