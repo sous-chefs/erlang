@@ -38,6 +38,7 @@ Attributes
 * `node['erlang']['source']['checksum']` - Checksum of the Erlang/OTP source tarball.
 * `node['erlang']['esl']['version']` - version specifier for Erlang
   Solutions packages.
+* `node['erlang']['esl']['compat']` - the compat version to be installed along side esl-erlang 
 
 Recipes
 =======
@@ -61,6 +62,11 @@ Adds Erlang Solutions' [package repositories][] on Debian, CentOS (>
 5), and Fedora systems, and installs the `esl-erlang` package.
 
 [package repositories]:https://www.erlang-solutions.com/downloads/download-erlang-otp
+
+Installs an additional RPM called esl-erlang-compat on CentOS systems. This is because the Erlang Solutions package does 
+not actually provide 'erlang' and so other packages with a dependency on 'erlang' fail to install. This package is nothing but a 
+version and "provides" statement and is currently a cookbook file. More information can be found
+on [this knowledge article]() plus the [github repo]() of the package creator.
 
 License and Author
 ==================

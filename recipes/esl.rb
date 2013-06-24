@@ -77,6 +77,17 @@ package "esl-erlang" do
   version node['erlang']['esl']['version'] if node['erlang']['esl']['version']
 end
 
+if node['platform_family'] == 'rhel'
+  # This is a yak shave solution to the fact that the ESL erlang package installs
+  # as 'esl-erlang' and some other packages have dependencies on simply 'erlang.'
+  # Don't hate the player...
+  cookbook_file "#{Chef::Config[:file_cache_path]}/esl-erlang-compat-#{node['erlang']['esl']['compat']}-1.el6.noarch.rpm" do
+    source "esl-erlang-compat-#{node['erlang']['esl']['compat']}-1.el6.noarch.rpm"
+    action :create_if_missing
+  end
+  
+  rpm_package "#{Chef::Config[:file_cache_path]}/esl-erlang-compat-#{node['erlang']['esl']['compat']}-1.el6.noarch.rpm"
+end
 # There's a small bug in the package for Ubuntu 10.04... this fixes
 # it.  Solution found at
 # https://github.com/davidcoallier/bigcouch/blob/f6a6daf7590ecbab4d9dc4747624573b3137dfad/README.md#ubuntu-1004-lts-potential-issues

@@ -25,6 +25,11 @@ describe_recipe 'erlang::erlang_solutions' do
     package("esl-erlang").must_be_installed
   end
 
+it 'installs the esl-erlang-compat package' do
+    skip unless node['platform_family'] == 'rhel'
+    package("esl-erlang-compat").must_be_installed
+  end
+
   it "can successfully run 'erl'" do
     erl = shell_out("erl -myflag 1 <<-EOH
 init:get_argument(myflag).
