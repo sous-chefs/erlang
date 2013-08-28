@@ -3,6 +3,11 @@ erland Cookbook CHANGELOG
 This file is used to list changes made in each version of the erlang cookbook.
 
 
+v1.3.2
+------
+### New Feature
+- **[COOK-2915](https://tickets.opscode.com/browse/COOK-2915)** - Debian codename override
+
 v1.3.0
 ------
 - Add support for Test Kitchen 1.0
