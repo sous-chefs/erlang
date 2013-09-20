@@ -73,7 +73,7 @@ else
   raise
 end
 
-package "esl-erlang" do
+package "erlang" do
   version node['erlang']['esl']['version'] if node['erlang']['esl']['version']
 end
 
