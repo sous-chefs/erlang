@@ -6,7 +6,7 @@ description       "Installs erlang, optionally install GUI tools."
 version           "1.3.3"
 
 depends           "apt", ">= 1.7.0"
-depends           "yum", ">= 0.5.0"
+depends           "yum", '< 3'
 depends           "build-essential"
 
 recipe "erlang", "Installs Erlang via native package, source, or Erlang Solutions package"
