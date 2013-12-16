@@ -3,6 +3,13 @@ erland Cookbook CHANGELOG
 This file is used to list changes made in each version of the erlang cookbook.
 
 
+v1.4.0
+------
+Porting to use cookbook yum ~> 3.0
+Moving tests from minitest to bats
+Fixing style against rubocop
+
+
 v1.3.6
 ------
 fixing metadata version error. locking to 3.0
