@@ -33,10 +33,6 @@ when 'debian'
     action :add
   end
 
-  package 'esl-erlang' do
-    version node['erlang']['esl']['version'] if node['erlang']['esl']['version']
-  end
-
 when 'rhel'
   if node['platform_version'].to_i <= 5
     Chef::Log.fatal('Erlang Solutions pacakge repositories are not available for EL5')
@@ -44,11 +40,10 @@ when 'rhel'
     # include_recipe 'yum-repoforge'
     include_recipe 'yum-erlang_solutions'
   end
+end
 
-  package 'erlang' do
-    version node['erlang']['esl']['version'] if node['erlang']['esl']['version']
-  end
-
+package 'esl-erlang' do
+  version node['erlang']['esl']['version'] if node['erlang']['esl']['version']
 end
 
 # There's a small bug in the package for Ubuntu 10.04... this fixes
