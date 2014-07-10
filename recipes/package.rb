@@ -24,8 +24,12 @@
 case node['platform_family']
 when 'debian'
   erlpkg = node['erlang']['gui_tools'] ? 'erlang-x11' : 'erlang-nox'
-  package erlpkg
-  package 'erlang-dev'
+  package erlpkg do
+    version node['erlang']['package']['version'] if node['erlang']['package']['version']
+  end
+  package 'erlang-dev' do
+    version node['erlang']['package']['version'] if node['erlang']['package']['version']
+  end
 
 when 'rhel'
   case node['platform_version'].to_i
@@ -43,5 +47,7 @@ when 'rhel'
     include_recipe 'yum-erlang_solutions'
   end
 
-  package 'erlang'
+  package 'erlang' do
+    version node['erlang']['package']['version'] if node['erlang']['package']['version']
+  end
 end
