@@ -2,6 +2,10 @@ erlang Cookbook CHANGELOG
 =========================
 This file is used to list changes made in each version of the erlang cookbook.
 
+v1.5.6 (2014-07-29)
+-------------------
+#16 - Allow for systems with that do not have lsb installed
+
 v1.5.4 (2014-04-30)
 -------------------
 - [COOK-4610] - New APT repository for ESL
