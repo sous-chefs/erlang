@@ -40,7 +40,9 @@ when 'rhel'
     end
 
   else
-    include_recipe 'yum-erlang_solutions'
+    unless node['erlang']['use_distro_version']
+      include_recipe 'yum-erlang_solutions'
+    end
   end
 
   package 'erlang'
