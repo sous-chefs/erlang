@@ -37,6 +37,7 @@ when 'rhel'
       baseurl 'http://repos.fedorapeople.org/repos/peter/erlang/epel-5Server/$basearch'
       gpgcheck false
       action :create
+      sslverify false
     end
 
   else
