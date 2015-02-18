@@ -28,10 +28,9 @@ when 'debian'
   package 'erlang-dev'
 
 when 'rhel'
+  include_recipe 'yum-epel'
   case node['platform_version'].to_i
   when 5
-    include_recipe 'yum-epel'
-
     yum_repository 'EPELErlangrepo' do
       description "Updated erlang yum repository for RedHat / Centos 5.x - #{node['kernel']['machine']}"
       baseurl 'http://repos.fedorapeople.org/repos/peter/erlang/epel-5Server/$basearch'
@@ -39,7 +38,6 @@ when 'rhel'
       action :create
     end
   else
-    include_recipe 'yum-epel'
     include_recipe 'yum-erlang_solutions'
   end
 
