@@ -45,7 +45,7 @@ Locking yum dependency to '< 3'
 v1.3.2
 ------
 ### New Feature
-- **[COOK-2915](https://tickets.opscode.com/browse/COOK-2915)** - Debian codename override
+- **[COOK-2915](https://tickets.chef.io/browse/COOK-2915)** - Debian codename override
 
 v1.3.0
 ------

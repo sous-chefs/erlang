@@ -72,12 +72,12 @@ License and Author
 ==================
 
 * Author: Joe Williams (<joe@joetify.com>)
-* Author: Joshua Timberman (<joshua@opscode.com>)
-* Author: Matt Ray (<matt@opscode.com>)
+* Author: Joshua Timberman (<joshua@chef.io>)
+* Author: Matt Ray (<matt@chef.io>)
 * Author: Hector Castro (<hector@basho.com>)
-* Author: Christopher Maier (<cm@opscode.com>)
+* Author: Christopher Maier (<cm@chef.io>)
 
-Copyright 2011-2013, Opscode, Inc.
+Copyright 2011-2013, Chef Software, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
