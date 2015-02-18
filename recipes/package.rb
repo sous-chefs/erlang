@@ -38,10 +38,8 @@ when 'rhel'
       gpgcheck false
       action :create
     end
-  when 7
-    include_recipe 'yum-epel'
-    include_recipe 'yum-erlang_solutions'
   else
+    include_recipe 'yum-epel'
     include_recipe 'yum-erlang_solutions'
   end
 
