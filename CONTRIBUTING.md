@@ -7,7 +7,7 @@ You can find the answers to additional frequently asked questions
 [on the wiki](http://wiki.chef.io/display/chef/How+to+Contribute).
 
 You can find additional information about
-[contributing to cookbooks](http://wiki.chef.io/display/chef/How+to+Contribute+to+Opscode+Cookbooks)
+[contributing to cookbooks](http://wiki.chef.io/display/chef/How+to+Contribute+to+Chef+Cookbooks)
 on the wiki as well.
 
 ## Quick-contribute
@@ -39,7 +39,7 @@ understands what rights they are licensing and agrees to them.
 Sometimes the copyright holder isn't the contributor, most often when
 the contributor is doing work for a company.
 
-To make a good faith effort to ensure these criteria are met, Opscode
+To make a good faith effort to ensure these criteria are met, Chef
 requires a Contributor License Agreement (CLA) or a Corporate
 Contributor License Agreement (CCLA) for all contributions. This is
 without exception due to some matters not being related to copyright
@@ -109,7 +109,7 @@ to them.
 
 ### Github and Pull Requests
 
-All of Opscode's open source cookbook projects are available on
+All of Chef's open source cookbook projects are available on
 [Github](http://www.github.com/chef-cookbooks).
 
 We don't require you to use Github, and we will even take patch diffs
@@ -133,12 +133,12 @@ wiki page.
 ## Functional and Unit Tests
 
 This cookbook is set up to run tests under
-[Opscode's test-kitchen](https://github.com/chef/test-kitchen). It
+[Chef's test-kitchen](https://github.com/chef/test-kitchen). It
 uses minitest-chef to run integration tests after the node has been
 converged to verify that the state of the node.
 
 Test kitchen should run completely without exception using the default
-[baseboxes provided by Opscode](https://github.com/chef/bento).
+[baseboxes provided by Chef](https://github.com/chef/bento).
 Because Test Kitchen creates VirtualBox machines and runs through
 every configuration in the Kitchenfile, it may take some time for
 these tests to complete.
@@ -196,7 +196,7 @@ cookbook begins, the "Z" patch number is incremented to the next odd
 number, however the next release of the cookbook may be a major or
 minor incrementing version.
 
-Releases of Opscode's cookbooks are usually announced on the Chef user
+Releases of Chef's cookbooks are usually announced on the Chef user
 mailing list. Releases of several cookbooks may be batched together
 and announced on the [Chef Software Blog](http://www.chef.io/blog).
 
@@ -247,7 +247,7 @@ Please do ensure that your changes do not break or modify behavior for
 other platforms supported by the cookbook. For example if your changes
 are for Debian, make sure that they do not break on CentOS.
 
-Please do not modify the version number in the metadata.rb, Opscode
+Please do not modify the version number in the metadata.rb, Chef
 will select the appropriate version based on the release cycle
 information above.
 
