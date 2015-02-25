@@ -2,6 +2,10 @@ erlang Cookbook CHANGELOG
 =========================
 This file is used to list changes made in each version of the erlang cookbook.
 
+v1.5.7 (2014-09-11)
+-------------------
+Add an attribute use_distro_version for using local repo.
+
 v1.5.6 (2014-07-29)
 -------------------
 #16 - Allow for systems with that do not have lsb installed

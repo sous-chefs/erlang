@@ -32,6 +32,7 @@ Attributes
   Erlang.
 * `node['erlang']['install_method']` - Erlang installation method
   ("package", "source", or "esl" (for Erlang Solutions packages)).
+* `node['erlang']['use_distro_version']` - Whether to use distro version erlang packages to install.
 * `node['erlang']['source']['version']` - Version of Erlang/OTP to install from source.
   "source")
 * `node['erlang']['source']['url']` - URL of Erlang/OTP source tarball.
