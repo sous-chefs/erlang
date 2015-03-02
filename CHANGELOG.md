@@ -2,7 +2,7 @@ erlang Cookbook CHANGELOG
 =========================
 This file is used to list changes made in each version of the erlang cookbook.
 
-v1.5.7 (UNRELEASED)
+v1.5.7 (2015-03-02)
 -------------------
 - Update Berksfile to use 
 [https://supermarket.chef.io](https://supermarket.chef.io)
