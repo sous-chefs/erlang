@@ -3,7 +3,7 @@ maintainer        'Chef Software, Inc.'
 maintainer_email  'cookbooks@chef.io'
 license           'Apache 2.0'
 description       'Installs erlang, optionally install GUI tools.'
-version           '1.5.6'
+version           '1.5.7'
 
 depends           'apt', '>= 1.7.0'
 depends           'yum', '~> 3.0'
