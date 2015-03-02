@@ -2,6 +2,9 @@ erlang Cookbook CHANGELOG
 =========================
 This file is used to list changes made in each version of the erlang cookbook.
 
+UNRELEASED
+----------
+
 v1.5.7 (2015-03-02)
 -------------------
 - Update Berksfile to use 
@@ -9,11 +12,11 @@ v1.5.7 (2015-03-02)
 - Update the `CONTRIBUTING.md` file with new URLs and information
 - Update copyright date and email addresses in `README.md`
 - Change 'Opscode, Inc.' to 'Chef Software, Inc.' where appropriate
-- #24 - Add yum-epel recipe to install prereqs for erlang.
+- [#24](https://github.com/opscode-cookbooks/erlang/issues/24) - Add yum-epel recipe to install prereqs for erlang.
 
 v1.5.6 (2014-07-29)
 -------------------
-#16 - Allow for systems with that do not have lsb installed
+- [#16](https://github.com/opscode-cookbooks/erlang/issues/16) - Allow for systems with that do not have lsb installed
 
 v1.5.4 (2014-04-30)
 -------------------
