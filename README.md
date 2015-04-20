@@ -14,11 +14,10 @@ Chef version 0.10.10+ and Ohai 0.6.12+ are required
 
 Tested on:
 
-* Ubuntu 10.04, 11.10, 12.04
-* Red Hat Enterprise Linux (CentOS/Amazon/Scientific/Oracle) 5.7, 6.2
+* Ubuntu 10.04, 11.10, 12.04, 14.04
+* Red Hat Enterprise Linux (CentOS/Amazon/Scientific/Oracle) 5.11, 6.6
 
-**Notes**: This cookbook has been tested on the listed platforms. It
-  may work on other platforms with or without modification.
+**Notes**: This cookbook has been tested on the listed platforms. It may work on other platforms with or without modification.
 
 ## Cookbooks
 
@@ -63,8 +62,7 @@ Installs Erlang from source.
 
 ## erlang_solutions
 
-Adds Erlang Solutions' [package repositories][] on Debian, CentOS (>
-5), and Fedora systems, and installs the `esl-erlang` package.
+Adds Erlang Solutions' [package repositories][] on Debian, CentOS (>5), and Fedora systems, and installs the `esl-erlang` package.
 
 [package repositories]:https://www.erlang-solutions.com/downloads/download-erlang-otp
 
