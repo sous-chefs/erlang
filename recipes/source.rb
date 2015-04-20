@@ -24,9 +24,9 @@ include_recipe 'build-essential'
 
 erlang_deps = case node['platform_family']
               when 'debian'
-                %w{ libncurses5-dev openssl libssl-dev }
+                %w(libncurses5-dev openssl libssl-dev)
               when 'rhel', 'fedora'
-                %w{ ncurses-devel openssl-devel }
+                %w(ncurses-devel openssl-devel)
               else
                 []
               end
@@ -43,7 +43,7 @@ bash 'install-erlang' do
     tar -xzf otp_src_#{node['erlang']['source']['version']}.tar.gz
     (cd otp_src_#{node['erlang']['source']['version']} && ./configure #{node['erlang']['source']['build_flags']} && make && make install)
   EOH
-  environment({"CFLAGS" => node['erlang']['source']['cflags']})
+  environment('CFLAGS' => node['erlang']['source']['cflags'])
   action :nothing
   not_if "erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().' -noshell | grep #{node['erlang']['source']['version']}"
 end

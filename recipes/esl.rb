@@ -17,7 +17,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 # Install Erlang/OTP from Erlang Solutions
 
 case node['platform_family']
@@ -40,12 +39,12 @@ when 'debian'
 when 'rhel'
   if node['platform_version'].to_i <= 5
     Chef::Log.fatal('Erlang Solutions pacakge repositories are not available for EL5')
-  else
-    # include_recipe 'yum-repoforge'
-    include_recipe 'yum-erlang_solutions'
+    fail
   end
 
-  package 'erlang' do
+  include_recipe 'yum-erlang_solutions'
+
+  package 'esl-erlang' do
     version node['erlang']['esl']['version'] if node['erlang']['esl']['version']
   end
 
@@ -54,7 +53,7 @@ end
 # There's a small bug in the package for Ubuntu 10.04... this fixes
 # it.  Solution found at
 # https://github.com/davidcoallier/bigcouch/blob/f6a6daf7590ecbab4d9dc4747624573b3137dfad/README.md#ubuntu-1004-lts-potential-issues
-if platform?('ubuntu') && node['platform_version'] == '10.04'
+if platform?('ubuntu') && node['platform_version'] == '10.04' # ~FC023
   bash 'ubuntu-10.04-LTS-erlang-fix' do
     user 'root'
     cwd '/usr/lib/erlang/man/man5'
