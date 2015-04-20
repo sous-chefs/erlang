@@ -2,13 +2,19 @@ erlang Cookbook CHANGELOG
 =========================
 This file is used to list changes made in each version of the erlang cookbook.
 
-UNRELEASED
-----------
+v1.5.8 (2015-04-20)
+-------------------
+
+- Use source, not site, for Berksfile
+- Lint fixes for rubocop and foodcritc
+- Move cloud specific kitchen config to .kitchen.cloud.yml
+- [#29](https://github.com/opscode-cookbooks/erlang/pull/29): fail the Chef run when attempting to use ESL on RHEL-family v5. The dependencies are not available, and blindly continuing leads to a broken state.
+- #29: Don't add Erlang Solutions yum repository in the "package" recipe
+- #29: Disable SSL verification of the EPEL repo in the "package" recipe due to an HTTP redirect bug in yum on RHEL -family 5.
 
 v1.5.7 (2015-03-02)
 -------------------
-- Update Berksfile to use 
-[https://supermarket.chef.io](https://supermarket.chef.io)
+- Update Berksfile to use [https://supermarket.chef.io](https://supermarket.chef.io)
 - Update the `CONTRIBUTING.md` file with new URLs and information
 - Update copyright date and email addresses in `README.md`
 - Change 'Opscode, Inc.' to 'Chef Software, Inc.' where appropriate
