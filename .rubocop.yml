@@ -1,3 +1,13 @@
+AllCops:
+  Include:
+    - Berksfile
+    - Gemfile
+    - Rakefile
+    - Thorfile
+    - Guardfile
+  Exclude:
+    - vendor/**
+
 Encoding:
   Enabled: false
 
@@ -6,3 +16,12 @@ LineLength:
 
 HashSyntax:
   EnforcedStyle: hash_rockets
+
+Style/SingleSpaceBeforeFirstArg:
+  Exclude:
+    - Rakefile
+    - metadata.rb
+
+Style/PercentLiteralDelimiters:
+  Exclude:
+    - metadata.rb
