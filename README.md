@@ -60,7 +60,7 @@ Installs Erlang from distribution packages.
 
 Installs Erlang from source.
 
-## erlang_solutions
+## esl
 
 Adds Erlang Solutions' [package repositories][] on Debian, CentOS (>5), and Fedora systems, and installs the `esl-erlang` package.
 
