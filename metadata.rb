@@ -19,3 +19,6 @@ recipe 'erlang::esl', "Installs Erlang from Erlang Solutions' package repositori
 %w{ ubuntu debian redhat centos scientific amazon oracle }.each do |os|
   supports os
 end
+
+source_url 'https://github.com/opscode-cookbooks/erlang' if respond_to?(:source_url)
+issues_url 'https://github.com/opscode-cookbooks/erlang/issues' if respond_to?(:source_url)
