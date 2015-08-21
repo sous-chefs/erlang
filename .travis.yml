@@ -11,4 +11,4 @@ before_script:
 script:
 #  - bundle exec foodcritic -f any . --tags ~FC005
   - bundle exec rubocop
-#  - bundle exec rspec --color --format progress
+  - bundle exec rspec --color --format progress
