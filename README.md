@@ -14,14 +14,15 @@ Chef version 0.10.10+ and Ohai 0.6.12+ are required
 
 Tested on:
 
-* Ubuntu 10.04, 11.10, 12.04, 14.04
+* Ubuntu 12.04/14.04
 * Red Hat Enterprise Linux (CentOS/Amazon/Scientific/Oracle) 5.11, 6.6
 
 **Notes**: This cookbook has been tested on the listed platforms. It may work on other platforms with or without modification.
 
 ## Cookbooks
-
-* yum (for epel recipe)
+* yum
+* yum-epel
+* yum-erlang_solutions
 * build-essential (for source compilation)
 
 Attributes
