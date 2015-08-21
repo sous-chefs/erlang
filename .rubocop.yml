@@ -6,7 +6,7 @@ AllCops:
     - Thorfile
     - Guardfile
   Exclude:
-    - vendor/**
+    - vendor/**/*
 
 Encoding:
   Enabled: false
