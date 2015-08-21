@@ -1,5 +1,5 @@
 language: ruby
-bundler_args: --without development integration
+bundler_args: --without kitchen_common kitchen_vagrant kitchen_cloud
 rvm:
   - 2.0
   - 2.1
