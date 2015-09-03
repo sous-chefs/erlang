@@ -1,5 +1,8 @@
-Description
-===========
+erlang Cookbook
+===============
+
+[![Build Status](https://travis-ci.org/opscode-cookbooks/erlang.svg?branch=master)](https://travis-ci.org/opscode-cookbooks/erlang)
+[![Cookbook Version](https://img.shields.io/cookbook/v/erlang.svg)](https://supermarket.chef.io/cookbooks/erlang)
 
 Manages installation of Erlang via packages or source.
 
@@ -75,7 +78,7 @@ License and Author
 * Author: Matt Ray (<matt@chef.io>)
 * Author: Hector Castro (<hector@basho.com>)
 * Author: Christopher Maier (<cm@chef.io>)
-
+```text
 Copyright 2011-2015, Chef Software, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -89,3 +92,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+```
