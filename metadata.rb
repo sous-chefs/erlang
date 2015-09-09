@@ -17,7 +17,7 @@ recipe 'erlang::package', 'Installs Erlang via native package'
 recipe 'erlang::source', 'Installs Erlang via source'
 recipe 'erlang::esl', "Installs Erlang from Erlang Solutions' package repositories"
 
-%w{ amazon centos debian oracle redhat scientific ubuntu }.each do |os|
+%w( amazon centos debian oracle redhat scientific ubuntu ).each do |os|
   supports os
 end
 
