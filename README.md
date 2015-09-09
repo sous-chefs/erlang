@@ -1,7 +1,7 @@
 erlang Cookbook
 ===============
 
-[![Build Status](https://travis-ci.org/opscode-cookbooks/erlang.svg?branch=master)](https://travis-ci.org/opscode-cookbooks/erlang)
+[![Build Status](https://travis-ci.org/chef-cookbooks/erlang.svg?branch=master)](https://travis-ci.org/chef-cookbooks/erlang)
 [![Cookbook Version](https://img.shields.io/cookbook/v/erlang.svg)](https://supermarket.chef.io/cookbooks/erlang)
 
 Manages installation of Erlang via packages or source.
