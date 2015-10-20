@@ -2,9 +2,30 @@ erlang Cookbook CHANGELOG
 =========================
 This file is used to list changes made in each version of the erlang cookbook.
 
+v2.0.0 (2015-10-20)
+-------------------
+* The minimum supported Chef release is now 11
+* Removed the workaround for Ubuntu 10.04 as 10.04 is no longer a support platform
+* Added additional platforms to the metadata
+* Improved readme formatting
+* Added source_url and issues_url to the metadata
+* Add a .foodcritic file to ignore rules
+* Updated the gitignore file
+* Updated to more modern platforms in the Kitchen config
+* Added chefignore file
+* Added Chef standard rubocop config
+* Updated Travis CI testing to use the ChefDK for up to date deps
+* Removed duplicate deps from the Berksfile
+* Updated Gemfile with the latest testing deps
+* Updated testing and contributing docs
+* Added maintainers.md and maintainers.toml files
+* Added travis and cookbook version badges to the readme
+* Added a Rakefile for simplified testing
+* Added basic convergence Chefspec
+* Resolved Rubocop warnings
+
 v1.5.8 (2015-04-20)
 -------------------
-
 - Use source, not site, for Berksfile
 - Lint fixes for rubocop and foodcritc
 - Move cloud specific kitchen config to .kitchen.cloud.yml
