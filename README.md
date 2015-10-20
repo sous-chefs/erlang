@@ -71,6 +71,7 @@ License & Authors
 * Author: Matt Ray (<matt@chef.io>)
 * Author: Hector Castro (<hector@basho.com>)
 * Author: Christopher Maier (<cm@chef.io>)
+
 ```text
 Copyright 2011-2015, Chef Software, Inc.
 
