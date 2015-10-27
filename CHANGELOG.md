@@ -5,7 +5,7 @@ This file is used to list changes made in each version of the erlang cookbook.
 v2.0.0 (2015-10-20)
 -------------------
 * The minimum supported Chef release is now 11
-* Removed the workaround for Ubuntu 10.04 as 10.04 is no longer a support platform
+* Removed the workaround for Ubuntu 10.04 as 10.04 is no longer a supported platform
 * Added additional platforms to the metadata
 * Improved readme formatting
 * Added source_url and issues_url to the metadata
