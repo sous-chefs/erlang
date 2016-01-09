@@ -7,7 +7,14 @@ driver:
   privileged: true
 
 platforms:
-- name: centos-7.1
+- name: centos-6
+  driver:
+    image: centos:6
+    platform: rhel
+    run_command: /sbin/init
+    provision_command:
+      - /usr/bin/yum install -y initscripts net-tools wget
+- name: centos-7
   driver:
     image: centos:7
     platform: rhel
@@ -45,16 +52,12 @@ suites:
     erlang:
       gui_tools: true
   excludes:
-    - centos-5.11
-    - centos-6.7 
-    - centos-7.1
-    - fedora-21
+    - centos-6
+    - centos-7
 
 - name: esl
   run_list:
     - recipe[erlang::esl]
-  excludes:
-    - centos-5.11
 
 - name: source
   run_list:
