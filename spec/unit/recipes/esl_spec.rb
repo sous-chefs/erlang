@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'erlang::esl' do
   describe 'Debian Platform Family' do
     cached(:chef_run_debian) do
-      ChefSpec::ServerRunner.new(platform: 'Ubuntu', version: '14.04')
+      ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '14.04')
         .converge('erlang::esl')
     end
 
