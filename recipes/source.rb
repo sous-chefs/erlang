@@ -37,21 +37,27 @@ erlang_deps.each do |pkg|
   end
 end
 
+erlang_version     = node['erlang']['source']['version']
+erlang_url         = node['erlang']['source']['url'] || "http://erlang.org/download/otp_src_#{erlang_version}.tar.gz"
+erlang_checksum    = node['erlang']['source']['checksum']
+erlang_build_flags = node['erlang']['source']['build_flags']
+erlang_cflags      = node['erlang']['source']['cflags']
+
 bash 'install-erlang' do
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
-    tar -xzf otp_src_#{node['erlang']['source']['version']}.tar.gz
-    (cd otp_src_#{node['erlang']['source']['version']} && ./configure #{node['erlang']['source']['build_flags']} && make && make install)
+    tar -xzf otp_src_#{erlang_version}.tar.gz
+    (cd otp_src_#{erlang_version} && ./configure #{erlang_build_flags} && make && make install)
   EOH
-  environment('CFLAGS' => node['erlang']['source']['cflags'])
+  environment('CFLAGS' => erlang_cflags)
   action :nothing
-  not_if "erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().' -noshell | grep #{node['erlang']['source']['version']}"
+  not_if "erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().' -noshell | grep #{erlang_version}"
 end
 
-remote_file File.join(Chef::Config[:file_cache_path], "otp_src_#{node['erlang']['source']['version']}.tar.gz") do
-  source node['erlang']['source']['url']
+remote_file File.join(Chef::Config[:file_cache_path], "otp_src_#{erlang_version}.tar.gz") do
+  source erlang_url
   owner 'root'
   mode 0644
-  checksum node['erlang']['source']['checksum']
+  checksum erlang_checksum
   notifies :run, 'bash[install-erlang]', :immediately
 end
