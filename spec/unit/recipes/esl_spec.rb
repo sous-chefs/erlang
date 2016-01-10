@@ -12,7 +12,7 @@ describe 'erlang::esl' do
     end
 
     it 'includes the apt recipe' do
-      expect(chef_run_debian).to include_recipe 'apt'
+      expect(chef_run_debian).to include_recipe('apt')
     end
 
     it 'adds the erlang_solutions_repo apt repository' do
