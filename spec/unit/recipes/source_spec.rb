@@ -33,7 +33,7 @@ describe 'erlang::source' do
 
   describe 'Debian Platform Family' do
     cached(:chef_run_debian) do
-      ChefSpec::ServerRunner.new(platform: 'debian', version: '8.1')
+      ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '14.04')
         .converge('erlang::source')
     end
 

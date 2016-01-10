@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'erlang::package' do
   describe 'Debian Platform Family' do
     let(:chef_run_debian) do
-      ChefSpec::ServerRunner.new(platform: 'debian', version: '8.1')
+      ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '14.04')
     end
 
     let(:debian_converged) { chef_run_debian.converge('erlang::package') }
