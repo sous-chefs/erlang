@@ -38,7 +38,7 @@ erlang_deps.each do |pkg|
 end
 
 erlang_version     = node['erlang']['source']['version']
-erlang_url         = node['erlang']['source']['url'] || "http://erlang.org/download/otp_src_#{erlang_version}.tar.gz"
+erlang_url         = node['erlang']['source']['url'] || "https://erlang.org/download/otp_src_#{erlang_version}.tar.gz"
 erlang_checksum    = node['erlang']['source']['checksum']
 erlang_build_flags = node['erlang']['source']['build_flags']
 erlang_cflags      = node['erlang']['source']['cflags']
