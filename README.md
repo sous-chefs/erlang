@@ -1,76 +1,59 @@
-erlang Cookbook
-===============
-
-[![Build Status](https://travis-ci.org/chef-cookbooks/erlang.svg?branch=master)](https://travis-ci.org/chef-cookbooks/erlang)
-[![Cookbook Version](https://img.shields.io/cookbook/v/erlang.svg)](https://supermarket.chef.io/cookbooks/erlang)
+# erlang Cookbook
+[![Build Status](https://travis-ci.org/chef-cookbooks/erlang.svg?branch=master)](https://travis-ci.org/chef-cookbooks/erlang) [![Cookbook Version](https://img.shields.io/cookbook/v/erlang.svg)](https://supermarket.chef.io/cookbooks/erlang)
 
 Manages installation of Erlang via packages or source.
 
-Requirements
-------------
-#### Platforms
+## Requirements
+### Platforms
 - Debian/Ubuntu
 - RHEL/CentOS/Scientific/Amazon/Oracle
 
-#### Chef
+### Chef
 - Chef 11+
 
-#### Cookbooks
-* yum
-* yum-epel
-* yum-erlang_solutions
-* build-essential (for source compilation)
+### Cookbooks
+- yum
+- yum-epel
+- yum-erlang_solutions
+- build-essential (for source compilation)
 
-Attributes
-----------
+## Attributes
+- `node['erlang']['gui_tools']` - whether to install the GUI tools for
+- Erlang.
+- `node['erlang']['install_method']` - Erlang installation method
+- ("package", "source", or "esl" (for Erlang Solutions packages)).
+- `node['erlang']['source']['version']` - Version of Erlang/OTP to install from source.
+- "source")
+- `node['erlang']['source']['url']` - URL of Erlang/OTP source tarball.
+- `node['erlang']['source']['checksum']` - Checksum of the Erlang/OTP source tarball.
+- `node['erlang']['source']['build_flags']` - Build flags for compiling Erlang/OTP.
+- `node['erlang']['source']['cflags']` - CFLAGS for configuring Erlang/OTP.
+- `node['erlang']['esl']['version']` - version specifier for Erlang
+- Solutions packages.
+- `node['erlang']['esl']['lsb_codename']` - override the code name
+- used for ESL packages, useful for installing the packages on
+- distributions that they don't make specific packages available
+- (e.g., maverick vs precise).
 
-* `node['erlang']['gui_tools']` - whether to install the GUI tools for
-  Erlang.
-* `node['erlang']['install_method']` - Erlang installation method
-  ("package", "source", or "esl" (for Erlang Solutions packages)).
-* `node['erlang']['source']['version']` - Version of Erlang/OTP to install from source.
-  "source")
-* `node['erlang']['source']['url']` - URL of Erlang/OTP source tarball.
-* `node['erlang']['source']['checksum']` - Checksum of the Erlang/OTP source tarball.
-* `node['erlang']['source']['build_flags']` - Build flags for compiling Erlang/OTP.
-* `node['erlang']['source']['cflags']` - CFLAGS for configuring Erlang/OTP.
-* `node['erlang']['esl']['version']` - version specifier for Erlang
-  Solutions packages.
-* `node['erlang']['esl']['lsb_codename']` - override the code name
-  used for ESL packages, useful for installing the packages on
-  distributions that they don't make specific packages available
-  (e.g., maverick vs precise).
-
-Recipes
--------
-
+## Recipes
 ### default
-
-Manages installation of Erlang. Includes the package or source recipe
-depending on the value of `node['erlang']['install_method']`.
+Manages installation of Erlang. Includes the package or source recipe depending on the value of `node['erlang']['install_method']`.
 
 ### package
-
 Installs Erlang from distribution packages.
 
 ### source
-
 Installs Erlang from source.
 
 ### esl
-
 Adds Erlang Solutions' [package repositories][] on Debian, CentOS (>5), and Fedora systems, and installs the `esl-erlang` package.
 
-[package repositories]:https://www.erlang-solutions.com/downloads/download-erlang-otp
-
-License & Authors
------------------
-
-* Author: Joe Williams (<joe@joetify.com>)
-* Author: Joshua Timberman (<joshua@chef.io>)
-* Author: Matt Ray (<matt@chef.io>)
-* Author: Hector Castro (<hector@basho.com>)
-* Author: Christopher Maier (<cm@chef.io>)
+## License & Authors
+- Author: Joe Williams ([joe@joetify.com](mailto:joe@joetify.com))
+- Author: Joshua Timberman ([joshua@chef.io](mailto:joshua@chef.io))
+- Author: Matt Ray ([matt@chef.io](mailto:matt@chef.io))
+- Author: Hector Castro ([hector@basho.com](mailto:hector@basho.com))
+- Author: Christopher Maier ([cm@chef.io](mailto:cm@chef.io))
 
 ```text
 Copyright 2011-2015, Chef Software, Inc.
@@ -87,3 +70,5 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+
+[package repositories]: https://www.erlang-solutions.com/downloads/download-erlang-otp
