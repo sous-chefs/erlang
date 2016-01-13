@@ -25,10 +25,10 @@ when 'debian'
   include_recipe 'apt'
 
   apt_repository 'erlang_solutions_repo' do
-    uri 'http://packages.erlang-solutions.com/debian/'
+    uri 'https://packages.erlang-solutions.com/debian/'
     distribution node['erlang']['esl']['lsb_codename']
     components ['contrib']
-    key 'http://packages.erlang-solutions.com/debian/erlang_solutions.asc'
+    key 'https://packages.erlang-solutions.com/debian/erlang_solutions.asc'
     action :add
   end
 
