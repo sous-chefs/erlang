@@ -46,7 +46,7 @@ describe 'erlang::source' do
 
   describe 'RHEL Platform Family' do
     cached(:chef_run_rhel) do
-      ChefSpec::ServerRunner.new(platform: 'centos', version: '7.0')
+      ChefSpec::ServerRunner.new(platform: 'centos', version: '7.2.1511')
                             .converge('erlang::source')
     end
 

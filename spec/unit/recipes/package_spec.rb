@@ -39,7 +39,7 @@ describe 'erlang::package' do
 
   describe 'RHEL Platform Family' do
     cached(:chef_run_rhel) do
-      ChefSpec::ServerRunner.new(platform: 'centos', version: '7.0')
+      ChefSpec::ServerRunner.new(platform: 'centos', version: '7.2.1511')
                             .converge('erlang::package')
     end
 
@@ -58,7 +58,7 @@ describe 'erlang::package' do
 
   context 'RHEL 5' do
     cached(:chef_run_rhel_5) do
-      ChefSpec::ServerRunner.new(platform: 'centos', version: '5.10')
+      ChefSpec::ServerRunner.new(platform: 'centos', version: '5.11')
                             .converge('erlang::package')
     end
 
