@@ -34,7 +34,7 @@ describe 'erlang::source' do
   describe 'Debian Platform Family' do
     cached(:chef_run_debian) do
       ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '14.04')
-        .converge('erlang::source')
+                            .converge('erlang::source')
     end
 
     %w(libncurses5-dev openssl libssl-dev).each do |pkg|
@@ -47,7 +47,7 @@ describe 'erlang::source' do
   describe 'RHEL Platform Family' do
     cached(:chef_run_rhel) do
       ChefSpec::ServerRunner.new(platform: 'centos', version: '7.0')
-        .converge('erlang::source')
+                            .converge('erlang::source')
     end
 
     %w(ncurses-devel openssl-devel).each do |pkg|

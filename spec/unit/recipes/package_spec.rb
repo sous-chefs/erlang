@@ -40,7 +40,7 @@ describe 'erlang::package' do
   describe 'RHEL Platform Family' do
     cached(:chef_run_rhel) do
       ChefSpec::ServerRunner.new(platform: 'centos', version: '7.0')
-        .converge('erlang::package')
+                            .converge('erlang::package')
     end
 
     it 'converges successfully' do
@@ -59,7 +59,7 @@ describe 'erlang::package' do
   context 'RHEL 5' do
     cached(:chef_run_rhel_5) do
       ChefSpec::ServerRunner.new(platform: 'centos', version: '5.10')
-        .converge('erlang::package')
+                            .converge('erlang::package')
     end
 
     it 'creates the yum EPELErlangrepo repository' do

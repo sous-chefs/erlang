@@ -39,7 +39,7 @@ when 'debian'
 when 'rhel'
   if node['platform_version'].to_i <= 5
     Chef::Log.fatal('Erlang Solutions pacakge repositories are not available for EL5')
-    fail
+    raise
   end
 
   include_recipe 'yum-erlang_solutions'
