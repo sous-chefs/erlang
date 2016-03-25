@@ -23,7 +23,7 @@ for details on the process and how to become a maintainer or the project lead.
     
       maintainers = [
         'sigje',
-        'someara',
+        'jjasghar',
         'tas50',
         'thommay'
       ]
@@ -33,9 +33,9 @@ for details on the process and how to become a maintainer or the project lead.
     name = "Jennifer Davis"
     github = "sigje"
 
-  [people.someara]
-    name = "Sean OMeara"
-    github = "someara"
+  [people.jjasghar]
+    name = "JJ Asghar"
+    github = "jjasghar"
 
   [people.tas50]
     name = "Tim Smith"
