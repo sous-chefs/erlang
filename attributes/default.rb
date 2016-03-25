@@ -18,8 +18,8 @@
 default['erlang']['gui_tools'] = false
 default['erlang']['install_method'] = 'package'
 
-default['erlang']['source']['version'] = 'R15B01'
-default['erlang']['source']['checksum'] = 'f94f7de7328af3c0cdc42089c1a4ecd03bf98ec680f47eb5e6cddc50261cabde'
+default['erlang']['source']['version'] = 'R16B03'
+default['erlang']['source']['checksum'] = '6133b3410681a5c934e54c76eee1825f96dead8d6a12c31a64f6e160daf0bb06'
 default['erlang']['source']['build_flags'] = ''
 default['erlang']['source']['cflags'] = ''
 
