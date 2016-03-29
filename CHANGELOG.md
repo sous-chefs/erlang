@@ -4,6 +4,10 @@ This file is used to list changes made in each version of the erlang cookbook.
 
 ## v2.1.0 (2016-03-29)
 
+- Fix bad version string in the metadata
+
+## v2.1.0 (2016-03-29)
+
 - Install R16B03 Erlang releae by default
 - Update the Rubocop config and resolve warnings
 
