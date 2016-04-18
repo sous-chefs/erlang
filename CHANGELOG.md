@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
-## v2.1.0 (2016-03-29)
+## v2.1.1 (2016-03-29)
 
 - Fix bad version string in the metadata
 
