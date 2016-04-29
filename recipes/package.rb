@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: erlang
-# Recipe:: default
+# Recipe:: package
 # Author:: Joe Williams <joe@joetify.com>
 # Author:: Matt Ray <matt@chef.io>
 # Author:: Hector Castro <hector@basho.com>
