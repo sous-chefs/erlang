@@ -11,10 +11,6 @@ describe 'erlang::esl' do
       expect { :chef_run_debian }.to_not raise_error
     end
 
-    it 'includes the apt recipe' do
-      expect(chef_run_debian).to include_recipe('apt')
-    end
-
     it 'adds the erlang_solutions_repo apt repository' do
       expect(chef_run_debian).to add_apt_repository('erlang_solutions_repo')
     end
