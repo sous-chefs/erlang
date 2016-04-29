@@ -51,7 +51,7 @@ bash 'install-erlang' do
   EOH
   environment('CFLAGS' => erlang_cflags)
   action :nothing
-  not_if "erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().' -noshell | grep #{erlang_version}"
+  not_if "erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), \"releases\", erlang:system_info(otp_release), \"OTP_VERSION\"])), erlang:display(erlang:binary_to_list(Version)), halt().' -noshell | grep #{erlang_version}"
 end
 
 remote_file File.join(Chef::Config[:file_cache_path], "otp_src_#{erlang_version}.tar.gz") do
