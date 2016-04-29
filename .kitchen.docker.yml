@@ -19,6 +19,9 @@ platforms:
   driver:
     image: debian:8
     pid_one_command: /bin/systemd
+    intermediate_instructions:
+      - RUN /usr/bin/apt-get update
+      - RUN /usr/bin/apt-get install apt-transport-https net-tools -y
 
 - name: centos-5
   driver:
