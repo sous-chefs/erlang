@@ -2,6 +2,15 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
+## v3.0.0 (2016-04-29)
+
+- Default to Erlang 18.3
+- Fix the download URL for erlang as it is not actually https
+- Fixed the not_if that prevented source installs unless the version was different to know the full string of the installed version instead of the major. This would prevent Chef from installing 18.3 over 18.2.
+- Added zlinux to the metadata
+- Don't include apt::default on Debian/Ubuntu systems as it's not necessary to setup a repository
+- Switch test-kitchen testing in Travis to kitchen-dokken as add Fedora, Debian, and Ubuntu 16.04 testing as well as source install testing
+
 ## v2.1.1 (2016-03-29)
 
 - Fix bad version string in the metadata
@@ -47,7 +56,7 @@ This file is used to list changes made in each version of the erlang cookbook.
 - Use source, not site, for Berksfile
 - Lint fixes for rubocop and foodcritc
 - Move cloud specific kitchen config to .kitchen.cloud.yml
-- [#29](https://github.com/chef-cookbooks/erlang/pull/29): fail the Chef run when attempting to use ESL on RHEL-family v5. The dependencies are not available, and blindly continuing leads to a broken state.
+- [#29](https://github.com/chef-cookbooks/erlang/pull/29): fail the Chef run when attempting to use ESL on RHEL-family v5\. The dependencies are not available, and blindly continuing leads to a broken state.
 - 29: Don't add Erlang Solutions yum repository in the "package" recipe
 - 29: Disable SSL verification of the EPEL repo in the "package" recipe due to an HTTP redirect bug in yum on RHEL -family 5.
 
