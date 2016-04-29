@@ -21,9 +21,6 @@
 
 case node['platform_family']
 when 'debian'
-
-  include_recipe 'apt'
-
   apt_repository 'erlang_solutions_repo' do
     uri 'https://packages.erlang-solutions.com/debian/'
     distribution node['erlang']['esl']['lsb_codename']
@@ -35,7 +32,6 @@ when 'debian'
   package 'esl-erlang' do
     version node['erlang']['esl']['version'] if node['erlang']['esl']['version']
   end
-
 when 'rhel'
   if node['platform_version'].to_i <= 5
     Chef::Log.fatal('Erlang Solutions pacakge repositories are not available for EL5')
