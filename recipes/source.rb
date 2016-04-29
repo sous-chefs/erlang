@@ -57,7 +57,7 @@ end
 remote_file File.join(Chef::Config[:file_cache_path], "otp_src_#{erlang_version}.tar.gz") do
   source erlang_url
   owner 'root'
-  mode 0644
+  mode '0644'
   checksum erlang_checksum
   notifies :run, 'bash[install-erlang]', :immediately
 end
