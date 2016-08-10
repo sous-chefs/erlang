@@ -43,6 +43,9 @@ when 'rhel'
     end
   end
 
+  include_recipe 'yum-erlang_solutions' if node['erlang']['package']['use_erlang_solutions_repo']
   include_recipe 'yum-epel'
-  package 'erlang'
+  package 'erlang' do
+    version node['erlang']['package']['version'] if node['erlang']['package']['version']
+  end
 end
