@@ -1,4 +1,5 @@
 sudo: required
+dist: trusty
 
 # install the pre-release chef-dk.  Use chef-stable-precise to install the stable release
 addons:
@@ -18,6 +19,7 @@ env:
   - INSTANCE=default-debian-8
   - INSTANCE=default-centos-5
   - INSTANCE=default-centos-6
+  - INSTANCE=default-centos-7
   - INSTANCE=default-fedora-23
   - INSTANCE=source-ubuntu-1204
   - INSTANCE=source-ubuntu-1404
@@ -40,9 +42,9 @@ before_script:
 
 script:
   - /opt/chefdk/embedded/bin/chef --version
-  - /opt/chefdk/embedded/bin/rubocop --version
-  - /opt/chefdk/embedded/bin/rubocop
+  - /opt/chefdk/embedded/bin/cookstyle --version
+  - /opt/chefdk/embedded/bin/cookstyle
   - /opt/chefdk/embedded/bin/foodcritic --version
-  - /opt/chefdk/embedded/bin/foodcritic . --exclude spec -f any
+  - /opt/chefdk/embedded/bin/foodcritic . --exclude spec -f any -P
   - /opt/chefdk/embedded/bin/rspec
   - KITCHEN_LOCAL_YAML=.kitchen.docker.yml /opt/chefdk/embedded/bin/kitchen verify ${INSTANCE}
