@@ -29,7 +29,7 @@ describe 'erlang::package' do
 
       context 'gui_tools is true' do
         it 'installs erlang-x11 package' do
-          chef_run_debian.node.set['erlang']['gui_tools'] = true
+          chef_run_debian.node.normal['erlang']['gui_tools'] = true
           gui_tools_run = chef_run_debian.converge('erlang::package')
           expect(gui_tools_run).to install_package('erlang-x11')
         end
