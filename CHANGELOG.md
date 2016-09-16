@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
+## 4.0.0 (2016-09-16)
+- Testing updates
+- Remove traces of minitest handler from the code
+- Require Chef 12.1+ and use multipackage for installs
+
 ## v3.0.0 (2016-04-29)
 
 - Default to Erlang 18.3
