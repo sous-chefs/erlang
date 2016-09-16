@@ -1,23 +1,29 @@
 # erlang Cookbook
+
 [![Build Status](https://travis-ci.org/chef-cookbooks/erlang.svg?branch=master)](https://travis-ci.org/chef-cookbooks/erlang) [![Cookbook Version](https://img.shields.io/cookbook/v/erlang.svg)](https://supermarket.chef.io/cookbooks/erlang)
 
 Manages installation of Erlang via packages or source.
 
 ## Requirements
+
 ### Platforms
+
 - Debian/Ubuntu
 - RHEL/CentOS/Scientific/Amazon/Oracle
 
 ### Chef
-- Chef 11+
+
+- Chef 12.1+
 
 ### Cookbooks
-- yum
+
+- compat_resource
 - yum-epel
 - yum-erlang_solutions
 - build-essential (for source compilation)
 
 ## Attributes
+
 - `node['erlang']['gui_tools']` - whether to install the GUI tools for
 - Erlang.
 - `node['erlang']['install_method']` - Erlang installation method
@@ -36,19 +42,25 @@ Manages installation of Erlang via packages or source.
 - (e.g., maverick vs precise).
 
 ## Recipes
+
 ### default
+
 Manages installation of Erlang. Includes the package or source recipe depending on the value of `node['erlang']['install_method']`.
 
 ### package
+
 Installs Erlang from distribution packages.
 
 ### source
+
 Installs Erlang from source.
 
 ### esl
-Adds Erlang Solutions' [package repositories][] on Debian, CentOS (>5), and Fedora systems, and installs the `esl-erlang` package.
+
+Adds Erlang Solutions' [package repositories] on Debian, CentOS (>5), and Fedora systems, and installs the `esl-erlang` package.
 
 ## License & Authors
+
 - Author: Joe Williams ([joe@joetify.com](mailto:joe@joetify.com))
 - Author: Joshua Timberman ([joshua@chef.io](mailto:joshua@chef.io))
 - Author: Matt Ray ([matt@chef.io](mailto:matt@chef.io))
@@ -56,7 +68,7 @@ Adds Erlang Solutions' [package repositories][] on Debian, CentOS (>5), and Fedo
 - Author: Christopher Maier ([cm@chef.io](mailto:cm@chef.io))
 
 ```text
-Copyright 2011-2015, Chef Software, Inc.
+Copyright 2011-2016, Chef Software, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

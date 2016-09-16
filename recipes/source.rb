@@ -22,19 +22,11 @@
 
 include_recipe 'build-essential'
 
-erlang_deps = case node['platform_family']
-              when 'debian'
-                %w(libncurses5-dev openssl libssl-dev)
-              when 'rhel', 'fedora'
-                %w(ncurses-devel openssl-devel)
-              else
-                []
-              end
-
-erlang_deps.each do |pkg|
-  package pkg do
-    action :install
-  end
+case node['platform_family']
+when 'debian'
+  package %w(libncurses5-dev openssl libssl-dev)
+when 'rhel', 'fedora'
+  package %w(ncurses-devel openssl-devel)
 end
 
 erlang_version     = node['erlang']['source']['version']
