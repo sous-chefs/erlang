@@ -24,9 +24,9 @@ include_recipe 'build-essential'
 
 case node['platform_family']
 when 'debian'
-  package %w(libncurses5-dev openssl libssl-dev)
+  package %w(tar libncurses5-dev openssl libssl-dev)
 when 'rhel', 'fedora'
-  package %w(ncurses-devel openssl-devel)
+  package %w(tar ncurses-devel openssl-devel)
 end
 
 erlang_version     = node['erlang']['source']['version']
