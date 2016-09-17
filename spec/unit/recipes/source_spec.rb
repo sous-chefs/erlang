@@ -37,10 +37,8 @@ describe 'erlang::source' do
                             .converge('erlang::source')
     end
 
-    %w(libncurses5-dev openssl libssl-dev).each do |pkg|
-      it "installs #{pkg} package" do
-        expect(chef_run_debian).to install_package(pkg)
-      end
+    it 'installs dep packages' do
+      expect(chef_run_debian).to install_package(%w(tar libncurses5-dev openssl libssl-dev))
     end
   end
 
@@ -50,10 +48,8 @@ describe 'erlang::source' do
                             .converge('erlang::source')
     end
 
-    %w(ncurses-devel openssl-devel).each do |pkg|
-      it "installs #{pkg} package" do
-        expect(chef_run_rhel).to install_package(pkg)
-      end
+    it 'installs dep packages' do
+      expect(chef_run_rhel).to install_package(%w(tar ncurses-devel openssl-devel))
     end
   end
 end

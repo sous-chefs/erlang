@@ -18,7 +18,7 @@ describe 'erlang::package' do
 
     describe 'GUI Tools' do
       context 'gui_tools is false' do
-        it 'installs erlang-nox package by default' do
+        it 'installs erlang-nox erlang-x11 package by default' do
           expect(debian_converged).to install_package('erlang-nox')
         end
 
