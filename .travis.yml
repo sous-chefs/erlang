@@ -31,7 +31,6 @@ env:
   - INSTANCE=source-ubuntu-1404
   - INSTANCE=source-ubuntu-1604
   - INSTANCE=source-debian-8
-  - INSTANCE=source-centos-6
   - INSTANCE=source-fedora-latest
   - INSTANCE=source-centos-7
 
