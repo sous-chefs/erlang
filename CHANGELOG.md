@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
+## 4.1.0 (2016-12-22)
+- Replace BATS tests with InSpec
+- Fix package and source installs for Fedora and openSUSE
+- Update source version to 19.2
+- Improved version check for source install guard
+
 ## 4.0.0 (2016-09-16)
 - Testing updates
 - Remove traces of minitest handler from the code
