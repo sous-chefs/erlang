@@ -27,6 +27,8 @@ when 'debian'
   package %w(tar libncurses5-dev openssl libssl-dev)
 when 'rhel', 'fedora'
   package %w(tar ncurses-devel openssl-devel)
+when 'suse'
+  package %w(tar ncurses-devel libopenssl-devel)
 end
 
 erlang_version     = node['erlang']['source']['version']
@@ -34,6 +36,12 @@ erlang_url         = node['erlang']['source']['url'] || "http://erlang.org/downl
 erlang_checksum    = node['erlang']['source']['checksum']
 erlang_build_flags = node['erlang']['source']['build_flags']
 erlang_cflags      = node['erlang']['source']['cflags']
+
+if erlang_version =~ /R\d*B\d*/
+  ver_check = "erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().'  -noshell"
+else
+  ver_check = "erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), \"releases\", erlang:system_info(otp_release), \"OTP_VERSION\"])), erlang:display(erlang:binary_to_list(Version)), halt().' -noshell"
+end
 
 bash 'install-erlang' do
   cwd Chef::Config[:file_cache_path]
@@ -43,7 +51,7 @@ bash 'install-erlang' do
   EOH
   environment('CFLAGS' => erlang_cflags)
   action :nothing
-  not_if "erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), \"releases\", erlang:system_info(otp_release), \"OTP_VERSION\"])), erlang:display(erlang:binary_to_list(Version)), halt().' -noshell | grep #{erlang_version}"
+  not_if "#{ver_check} | grep #{erlang_version}"
 end
 
 remote_file File.join(Chef::Config[:file_cache_path], "otp_src_#{erlang_version}.tar.gz") do

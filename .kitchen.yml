@@ -45,6 +45,9 @@ suites:
     - recipe[erlang::esl]
   excludes:
     - centos-5.11
+    - fedora-25
+    - opensuse-13.2
+    - opensuse-42.2  
 
 - name: source
   run_list:
