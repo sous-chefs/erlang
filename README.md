@@ -30,6 +30,7 @@ Manages installation of Erlang via packages or source.
   Erlang.
 - `node['erlang']['install_method']` - Erlang installation method
   ("package", "source", or "esl" (for Erlang Solutions packages)).
+- `node['erlang']['package']['version']` - OS specific version of Erlang package to install
 - `node['erlang']['source']['version']` - Version of Erlang/OTP to install from source.
 - `node['erlang']['source']['url']` - URL of Erlang/OTP source tarball.
 - `node['erlang']['source']['checksum']` - Checksum of the Erlang/OTP source tarball.

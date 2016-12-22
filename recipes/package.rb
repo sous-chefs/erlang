@@ -44,5 +44,7 @@ when 'rhel', 'suse', 'fedora'
   end
 
   include_recipe 'yum-epel' if node['platform_family'] == 'rhel'
-  package 'erlang'
+  package 'erlang' do
+    version node['erlang']['package']['version'] if node['erlang']['package']['version']
+  end
 end
