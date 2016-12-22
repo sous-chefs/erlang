@@ -27,7 +27,7 @@ when 'debian'
   package erlpkg
   package 'erlang-dev'
 
-when 'rhel'
+when 'rhel', 'suse', 'fedora'
   if node['platform_version'].to_i == 5
     Chef::Log.warn('Adding EPEL Erlang Repo. This will have SSL verification disabled, as')
     Chef::Log.warn('RHEL/CentOS 5.x will not be able to verify the SSL certificate of this')
@@ -43,6 +43,6 @@ when 'rhel'
     end
   end
 
-  include_recipe 'yum-epel'
+  include_recipe 'yum-epel' if node['platform_family'] == 'rhel'
   package 'erlang'
 end

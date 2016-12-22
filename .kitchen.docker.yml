@@ -11,8 +11,7 @@ provisioner:
   name: dokken
 
 verifier:
-  root_path: '/opt/verifier'
-  sudo: false
+  name: inspec
 
 platforms:
 - name: debian-7
@@ -90,9 +89,9 @@ platforms:
     intermediate_instructions:
       - RUN zypper --non-interactive install aaa_base perl-Getopt-Long-Descriptive which net-tools
 
-- name: opensuse-42.1
+- name: opensuse-leap
   driver:
-    image: opensuse:42.1
+    image: opensuse:leap
     pid_one_command: /bin/systemd
     intermediate_instructions:
       - RUN zypper --non-interactive install aaa_base perl-Getopt-Long-Descriptive which hostname
@@ -114,6 +113,11 @@ suites:
 - name: esl
   run_list:
     - recipe[erlang::esl]
+  excludes:
+    - centos-5
+    - fedora-latest
+    - opensuse-13.2
+    - opensuse-42.2    
 
 - name: source
   run_list:

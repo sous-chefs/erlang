@@ -10,6 +10,8 @@ Manages installation of Erlang via packages or source.
 
 - Debian/Ubuntu
 - RHEL/CentOS/Scientific/Amazon/Oracle
+- Fedora
+- openSUSE
 
 ### Chef
 
