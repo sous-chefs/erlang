@@ -7,7 +7,7 @@ long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version           '4.1.0'
 
 depends           'apt', '>= 1.7.0'
-depends           'yum', '~> 3.0'
+depends           'yum', '>= 3.0'
 depends           'yum-epel'
 depends           'yum-erlang_solutions'
 depends           'build-essential'
