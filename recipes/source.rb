@@ -37,11 +37,11 @@ erlang_checksum    = node['erlang']['source']['checksum']
 erlang_build_flags = node['erlang']['source']['build_flags']
 erlang_cflags      = node['erlang']['source']['cflags']
 
-if erlang_version =~ /R\d*B\d*/
-  ver_check = "erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().'  -noshell"
-else
-  ver_check = "erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), \"releases\", erlang:system_info(otp_release), \"OTP_VERSION\"])), erlang:display(erlang:binary_to_list(Version)), halt().' -noshell"
-end
+ver_check = if erlang_version =~ /R\d*B\d*/
+              "erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().'  -noshell"
+            else
+              "erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), \"releases\", erlang:system_info(otp_release), \"OTP_VERSION\"])), erlang:display(erlang:binary_to_list(Version)), halt().' -noshell"
+            end
 
 bash 'install-erlang' do
   cwd Chef::Config[:file_cache_path]
