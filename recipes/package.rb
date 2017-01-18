@@ -23,8 +23,10 @@
 
 case node['platform_family']
 when 'debian'
-  erlpkg = node['erlang']['gui_tools'] ? 'erlang-x11' : 'erlang-nox'
-  package erlpkg
+  if node['platform_version'].to_i < 16.04
+    erlpkg = node['erlang']['gui_tools'] ? 'erlang-x11' : 'erlang-nox'
+    package erlpkg
+  end
   package 'erlang-dev'
 
 when 'rhel', 'suse', 'fedora'
