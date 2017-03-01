@@ -66,13 +66,6 @@ platforms:
     intermediate_instructions:
       - RUN /usr/bin/apt-get update
 
-- name: opensuse-13.2
-  driver:
-    image: opensuse:13.2
-    pid_one_command: /bin/systemd
-    intermediate_instructions:
-      - RUN zypper --non-interactive install aaa_base perl-Getopt-Long-Descriptive which net-tools
-
 - name: opensuse-leap
   driver:
     image: opensuse:leap
@@ -98,9 +91,7 @@ suites:
   run_list:
     - recipe[erlang::esl]
   excludes:
-    - centos-5
     - fedora-latest
-    - opensuse-13.2
     - opensuse-42.2
 
 - name: source
