@@ -5,19 +5,15 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: centos-5.11
   - name: centos-6.8
-  - name: centos-7.2
+  - name: centos-7.3
   - name: debian-7.11
     run_list: apt::default
   - name: debian-8.6
     run_list: apt::default
   - name: fedora-25
-    run_list: yum::dnf_yum_compat
   - name: opensuse-13.2
-  - name: opensuse-leap-42.1
-  - name: ubuntu-12.04
-    run_list: apt::default
+  - name: opensuse-leap-42.2
   - name: ubuntu-14.04
     run_list: apt::default
   - name: ubuntu-16.04
@@ -37,7 +33,7 @@ suites:
   excludes:
     - centos-5.11
     - centos-6.8
-    - centos-7.2
+    - centos-7.3
     - fedora-25
 
 - name: esl
@@ -47,7 +43,7 @@ suites:
     - centos-5.11
     - fedora-25
     - opensuse-13.2
-    - opensuse-42.2  
+    - opensuse-42.2
 
 - name: source
   run_list:
