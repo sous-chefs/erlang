@@ -20,14 +20,12 @@ services: docker
 
 env:
   matrix:
-  - INSTANCE=default-ubuntu-1204
   - INSTANCE=default-ubuntu-1404
   - INSTANCE=default-ubuntu-1604
   - INSTANCE=default-debian-8
   - INSTANCE=default-centos-6
   - INSTANCE=default-centos-7
   - INSTANCE=default-fedora-latest
-  - INSTANCE=source-ubuntu-1204
   - INSTANCE=source-ubuntu-1404
   - INSTANCE=source-ubuntu-1604
   - INSTANCE=source-debian-8
@@ -38,7 +36,7 @@ before_script:
   - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
   - eval "$(/opt/chefdk/bin/chef shell-init bash)"
 
-script: KITCHEN_LOCAL_YAML=.kitchen.docker.yml /opt/chefdk/embedded/bin/kitchen verify ${INSTANCE}
+script: KITCHEN_LOCAL_YAML=.kitchen.dokken.yml /opt/chefdk/embedded/bin/kitchen verify ${INSTANCE}
 
 matrix:
   include:
@@ -48,5 +46,5 @@ matrix:
       - /opt/chefdk/embedded/bin/cookstyle --version
       - /opt/chefdk/embedded/bin/foodcritic --version
     - script:
-      - /opt/chefdk/bin/chef exec rake
+      - /opt/chefdk/bin/chef exec delivery local all
       env: UNIT_AND_LINT=1
