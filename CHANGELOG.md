@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
+## 4.1.1 (2017-03-01)
+- Fix packaging issue related to nox package on Ubuntu 16.04+
+- Cookstyle fixes
+- Loosen up the yum dependency
+
 ## 4.1.0 (2016-12-22)
 - Replace BATS tests with InSpec
 - Fix package and source installs for Fedora and openSUSE
