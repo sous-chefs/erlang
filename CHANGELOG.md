@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
+## 5.1.0 (2017-04-04)
+
+- Add of a new attribute toggling EPEL repo installation.
+
 ## 4.1.1 (2017-03-01)
 - Fix packaging issue related to nox package on Ubuntu 16.04+
 - Cookstyle fixes
