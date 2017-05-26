@@ -42,6 +42,7 @@ when 'rhel', 'suse', 'fedora'
       gpgcheck false
       sslverify false
       action :create
+      sslverify false
     end
   end
 
