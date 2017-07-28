@@ -34,7 +34,7 @@ when 'debian'
   package 'esl-erlang' do
     version node['erlang']['esl']['version'] if node['erlang']['esl']['version']
   end
-when 'rhel'
+when 'rhel', 'amazon'
   if node['platform_version'].to_i <= 5
     Chef::Log.fatal('Erlang Solutions package repositories are not available for EL5')
     raise
