@@ -25,7 +25,7 @@ include_recipe 'build-essential'
 case node['platform_family']
 when 'debian'
   package %w(tar libncurses5-dev openssl libssl-dev)
-when 'rhel', 'fedora'
+when 'rhel', 'fedora', 'amazon'
   package %w(tar ncurses-devel openssl-devel)
 when 'suse'
   package %w(tar ncurses-devel libopenssl-devel)
