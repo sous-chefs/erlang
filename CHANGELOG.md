@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
+## 6.0.0 (2018-02-16)
+
+- Require Chef 12.9+ and remove compat_resource dep
+- Testing improvements
+
 ## 5.1.0 (2017-04-04)
 
 - Add of a new attribute toggling EPEL repo installation.
