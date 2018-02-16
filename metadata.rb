@@ -6,7 +6,6 @@ description       'Installs erlang, optionally install GUI tools.'
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version           '5.1.0'
 
-depends           'compat_resource'
 depends           'yum-epel'
 depends           'yum-erlang_solutions', '>= 1.0.3'
 depends           'build-essential'
@@ -22,4 +21,4 @@ end
 
 source_url 'https://github.com/chef-cookbooks/erlang'
 issues_url 'https://github.com/chef-cookbooks/erlang/issues'
-chef_version '>= 12.1'
+chef_version '>= 12.9'

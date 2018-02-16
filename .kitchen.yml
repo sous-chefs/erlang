@@ -11,6 +11,8 @@ platforms:
     run_list: apt::default
   - name: debian-8
     run_list: apt::default
+  - name: debian-9
+    run_list: apt::default
   - name: fedora-26
   - name: opensuse-leap-42
   - name: ubuntu-14.04
