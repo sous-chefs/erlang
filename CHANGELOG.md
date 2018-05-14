@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
+## 6.1.0 (2018-05-14)
+
+- Use build_essential resource vs. recipe
+
 ## 6.0.0 (2018-02-16)
 
 - Require Chef 12.9+ and remove compat_resource dep
