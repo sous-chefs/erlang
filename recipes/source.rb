@@ -20,7 +20,7 @@
 # limitations under the License.
 #
 
-include_recipe 'build-essential'
+build_essential 'install compilation tools'
 
 case node['platform_family']
 when 'debian'
