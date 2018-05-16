@@ -1,20 +1,20 @@
 require 'spec_helper'
 
 describe 'erlang::source' do
-  describe 'All Platforms' do
-    cached(:chef_run) { ChefSpec::ServerRunner.new.converge('erlang::source') }
+  describe 'On Debain Platform Family' do
+    cached(:chef_run) { ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '16.04').converge('erlang::source') }
 
-    it 'converges successfully' do
-      expect { :chef_run_rhel }.to_not raise_error
-    end
-
-    it 'includes the build-essential recipe' do
-      expect(chef_run).to include_recipe('build-essential')
+    it 'includes the build_essential resource' do
+      expect(chef_run).to install_build_essential('install compilation tools')
     end
 
     it 'contains bash[install-erlang] with action nothing' do
       execute_resource = chef_run.bash('install-erlang')
       expect(execute_resource).to do_nothing
+    end
+
+    it 'installs dep packages' do
+      expect(chef_run).to install_package(%w(tar libncurses5-dev openssl libssl-dev))
     end
 
     context 'Erlang source remote file' do
@@ -31,20 +31,9 @@ describe 'erlang::source' do
     end
   end
 
-  describe 'Debian Platform Family' do
-    cached(:chef_run_debian) do
-      ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '14.04')
-                            .converge('erlang::source')
-    end
-
-    it 'installs dep packages' do
-      expect(chef_run_debian).to install_package(%w(tar libncurses5-dev openssl libssl-dev))
-    end
-  end
-
   describe 'RHEL Platform Family' do
     cached(:chef_run_rhel) do
-      ChefSpec::ServerRunner.new(platform: 'centos', version: '7.3.1611')
+      ChefSpec::SoloRunner.new(platform: 'centos', version: '7.3.1611')
                             .converge('erlang::source')
     end
 

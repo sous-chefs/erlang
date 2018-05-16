@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'erlang::package' do
   describe 'Debian Platform Family' do
     let(:chef_run_debian) do
-      ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '14.04')
+      ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '16.04')
     end
 
     let(:debian_converged) { chef_run_debian.converge('erlang::package') }
@@ -39,7 +39,7 @@ describe 'erlang::package' do
 
   describe 'RHEL Platform Family' do
     cached(:chef_run_rhel) do
-      ChefSpec::ServerRunner.new(platform: 'centos', version: '7.3.1611')
+      ChefSpec::SoloRunner.new(platform: 'centos', version: '7.3.1611')
                             .converge('erlang::package')
     end
 
@@ -53,17 +53,6 @@ describe 'erlang::package' do
 
     it 'installs the erlang package' do
       expect(chef_run_rhel).to install_package('erlang')
-    end
-  end
-
-  context 'RHEL 5' do
-    cached(:chef_run_rhel_5) do
-      ChefSpec::ServerRunner.new(platform: 'centos', version: '5.11')
-                            .converge('erlang::package')
-    end
-
-    it 'creates the yum EPELErlangrepo repository' do
-      expect(chef_run_rhel_5).to create_yum_repository('EPELErlangrepo')
     end
   end
 end
