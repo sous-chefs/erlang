@@ -8,7 +8,7 @@ version           '6.1.0'
 
 depends           'yum-epel'
 depends           'yum-erlang_solutions', '>= 1.0.3'
-depends           'build-essential' '>= 5.0'
+depends           'build-essential', '>= 5.0'
 
 recipe 'erlang', 'Installs Erlang via native package, source, or Erlang Solutions package'
 recipe 'erlang::package', 'Installs Erlang via native package'
