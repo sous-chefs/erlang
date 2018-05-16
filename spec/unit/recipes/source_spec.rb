@@ -34,7 +34,7 @@ describe 'erlang::source' do
   describe 'RHEL Platform Family' do
     cached(:chef_run_rhel) do
       ChefSpec::SoloRunner.new(platform: 'centos', version: '7.3.1611')
-                            .converge('erlang::source')
+                          .converge('erlang::source')
     end
 
     it 'installs dep packages' do

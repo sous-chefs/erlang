@@ -4,7 +4,7 @@ describe 'erlang::esl' do
   describe 'Debian Platform Family' do
     cached(:chef_run_debian) do
       ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '16.04')
-                            .converge('erlang::esl')
+                          .converge('erlang::esl')
     end
 
     it 'converges successfully' do
@@ -23,7 +23,7 @@ describe 'erlang::esl' do
   describe 'RHEL Platform Family' do
     cached(:chef_run_rhel) do
       ChefSpec::SoloRunner.new(platform: 'centos', version: '7.3.1611')
-                            .converge('erlang::esl')
+                          .converge('erlang::esl')
     end
 
     it 'converges successfully' do
