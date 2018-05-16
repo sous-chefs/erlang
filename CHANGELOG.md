@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
+## 6.1.1 (2018-05-15)
+
+- Update kitchen configs
+- Update specs to the latest platform versions
+
 ## 6.1.0 (2018-05-14)
 
 - Use build_essential resource vs. recipe
