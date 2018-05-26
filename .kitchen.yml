@@ -7,13 +7,11 @@ provisioner:
 platforms:
   - name: centos-6
   - name: centos-7
-  - name: debian-7
-    run_list: apt::default
   - name: debian-8
     run_list: apt::default
   - name: debian-9
     run_list: apt::default
-  - name: fedora-26
+  - name: fedora-28
   - name: opensuse-leap-42
   - name: ubuntu-14.04
     run_list: apt::default
@@ -34,13 +32,13 @@ suites:
   excludes:
     - centos-6
     - centos-7
-    - fedora-26
+    - fedora-28
 
 - name: esl
   run_list:
     - recipe[erlang::esl]
   excludes:
-    - fedora-26
+    - fedora-28
     - opensuse-42
 
 - name: source
