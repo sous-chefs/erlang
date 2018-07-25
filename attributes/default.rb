@@ -29,5 +29,13 @@ default['erlang']['source']['cflags'] = ''
 default['erlang']['esl']['version'] = nil
 default['erlang']['esl']['lsb_codename'] = node['lsb'] ? node['lsb']['codename'] : 'no_lsb'
 
+# NOTE: these parameters are only used by Debian and derivatives. On Red
+# Hat-based systems, use the equivalent parameters in the
+# `yum-erlang_solutions` cookbook:
+# default['yum']['erlang_solutions']['baseurl']
+# default['yum']['erlang_solutions']['gpgkey']
+default['erlang']['esl']['repo']['uri'] = 'https://packages.erlang-solutions.com/debian/'
+default['erlang']['esl']['repo']['key'] = 'https://packages.erlang-solutions.com/debian/erlang_solutions.asc'
+
 default['erlang']['package']['version'] = nil
 default['erlang']['package']['install_epel_repository'] = true

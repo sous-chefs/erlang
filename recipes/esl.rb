@@ -24,10 +24,10 @@ when 'debian'
   package 'apt-transport-https'
 
   apt_repository 'erlang_solutions_repo' do
-    uri 'https://packages.erlang-solutions.com/debian/'
+    uri node['erlang']['esl']['repo']['uri']
     distribution node['erlang']['esl']['lsb_codename']
     components ['contrib']
-    key 'https://packages.erlang-solutions.com/debian/erlang_solutions.asc'
+    key node['erlang']['esl']['repo']['key']
     action :add
   end
 
