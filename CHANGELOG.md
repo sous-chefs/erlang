@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
+## 6.2.0 (2018-08-06)
+
+- Allow specifying a mirror of the ESL repository with new attributes
+
 ## 6.1.1 (2018-05-15)
 
 - Update kitchen configs
