@@ -15,7 +15,7 @@ Manages installation of Erlang via packages or source.
 
 ### Chef
 
-- Chef 12.9+
+- Chef 13.3+
 
 ### Cookbooks
 
