@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
+## 7.0.0 (2018-08-30)
+
+- If package version is specified pin version on debian when using esl. This requires the apt_preference resource which raises the minimum supported chef-client release for this cookbook to 13.3.
+
 ## 6.2.0 (2018-08-06)
 
 - Allow specifying a mirror of the ESL repository with new attributes
