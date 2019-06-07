@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
+## 7.0.1 (2019-06-06)
+
+- Remove the .foodcritic file with exclusions - [@tas50](https://github.com/tas50)
+- Add a codeowners file - [@tas50](https://github.com/tas50)
+- Update esl.rb to resolve failures- [@amurgatroyd](https://github.com/amurgatroyd)
+
 ## 7.0.0 (2018-08-30)
 
 - If package version is specified pin version on debian when using esl. This requires the apt_preference resource which raises the minimum supported chef-client release for this cookbook to 13.3.
