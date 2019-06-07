@@ -34,7 +34,7 @@ when 'debian'
   apt_preference 'erlang_solutions_repo' do
     package_name 'esl-erlang'
     pin "version #{node['erlang']['esl']['version']}"
-    pin_priority 700
+    pin_priority '700'
     action :add
     not_if { node['erlang']['esl']['version'].nil? }
   end
