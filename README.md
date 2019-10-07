@@ -15,13 +15,12 @@ Manages installation of Erlang via packages or source.
 
 ### Chef
 
-- Chef 13.3+
+- Chef 14+
 
 ### Cookbooks
 
 - yum-epel
 - yum-erlang_solutions
-- build-essential (for source compilation)
 
 ## Attributes
 
