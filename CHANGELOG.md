@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
+## 8.0.0 (2019-10-07)
+
+- Resolve Cookstyle 5.8 warnings - [@tas50](https://github.com/tas50)
+- Require Chef Client 14+ and remove the dependency on build-essential - [@tas50](https://github.com/tas50)
+- Remove support for RHEL 5 / Ubuntu 14.04 - [@tas50](https://github.com/tas50)
+
 ## 7.0.1 (2019-06-06)
 
 - Remove the .foodcritic file with exclusions - [@tas50](https://github.com/tas50)
