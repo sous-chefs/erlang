@@ -23,29 +23,11 @@
 
 case node['platform_family']
 when 'debian'
-  if node['platform_version'].to_i < 16.04
-    erlpkg = node['erlang']['gui_tools'] ? 'erlang-x11' : 'erlang-nox'
-    package erlpkg
-  end
   package 'erlang-dev'
 
 when 'rhel', 'suse', 'fedora'
-  if node['platform_version'].to_i == 5 && node['erlang']['package']['install_epel_repository']
-    Chef::Log.warn('Adding EPEL Erlang Repo. This will have SSL verification disabled, as')
-    Chef::Log.warn('RHEL/CentOS 5.x will not be able to verify the SSL certificate of this')
-    Chef::Log.warn('repository despite it being valid because yum on does not correctly')
-    Chef::Log.warn('follow the HTTP redirect.')
-
-    yum_repository 'EPELErlangrepo' do
-      description "Updated erlang yum repository for RedHat / Centos 5.x - #{node['kernel']['machine']}"
-      baseurl 'https://repos.fedorapeople.org/repos/peter/erlang/epel-5Server/$basearch'
-      gpgcheck false
-      sslverify false
-      action :create
-    end
-  end
-
   include_recipe 'yum-epel' if platform_family?('rhel') && node['erlang']['package']['install_epel_repository']
+
   package 'erlang' do
     version node['erlang']['package']['version'] if node['erlang']['package']['version']
   end

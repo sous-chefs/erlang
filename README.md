@@ -8,8 +8,8 @@ Manages installation of Erlang via packages or source.
 
 ### Platforms
 
-- Debian/Ubuntu
-- RHEL/CentOS/Scientific/Amazon/Oracle
+- Debian/Ubuntu 16.04+
+- RHEL/CentOS/Scientific/Amazon/Oracle 6+
 - Fedora
 - openSUSE
 
