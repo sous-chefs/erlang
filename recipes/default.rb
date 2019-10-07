@@ -4,8 +4,8 @@
 # Author:: Matt Ray <matt@chef.io>
 # Author:: Hector Castro <hector@basho.com>
 #
-# Copyright:: 2008-2016, Joe Williams
-# Copyright:: 2011-2016, Chef Software Inc.
+# Copyright:: 2008-2019, Joe Williams
+# Copyright:: 2011-2019, Chef Software Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
