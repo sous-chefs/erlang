@@ -15,8 +15,8 @@ platforms:
     run_list: apt::default
   - name: debian-10
     run_list: apt::default
-  - name: fedora-29
-  - name: opensuse-leap-42
+  - name: fedora-latest
+  - name: opensuse-leap-15
   - name: ubuntu-16.04
     run_list: apt::default
   - name: ubuntu-18.04
@@ -36,14 +36,14 @@ suites:
   excludes:
     - centos-6
     - centos-7
-    - fedora-28
+    - fedora-latest
 
 - name: esl
   run_list:
     - recipe[erlang::esl]
   excludes:
-    - fedora-28
-    - opensuse-leap-42
+    - fedora-latest
+    - opensuse-leap-15
 
 - name: source
   run_list:
