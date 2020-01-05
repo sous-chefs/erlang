@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'erlang::source' do
-  describe 'On Debain Platform Family' do
+  context 'On Debain Platform Family' do
     cached(:chef_run) { ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '16.04').converge('erlang::source') }
 
     it 'includes the build_essential resource' do
@@ -31,9 +31,9 @@ describe 'erlang::source' do
     end
   end
 
-  describe 'RHEL Platform Family' do
+  context 'RHEL Platform Family' do
     cached(:chef_run_rhel) do
-      ChefSpec::SoloRunner.new(platform: 'centos', version: '7.3.1611')
+      ChefSpec::SoloRunner.new(platform: 'centos')
                           .converge('erlang::source')
     end
 
