@@ -56,7 +56,7 @@ script: KITCHEN_LOCAL_YAML=kitchen.dokken.yml CHEF_VERSION=${CHEF_VERSION} kitch
 matrix:
   include:
     - script:
-      - chef exec delivery local all
+      - delivery local all
       env:
         - UNIT_AND_LINT=1
         - CHEF_LICENSE=accept
