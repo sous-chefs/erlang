@@ -5,11 +5,11 @@ describe 'erlang::esl' do
     platform 'ubuntu'
 
     it 'adds the erlang_solutions_repo apt repository' do
-     is_expected.to add_apt_repository('erlang_solutions_repo')
+      is_expected.to add_apt_repository('erlang_solutions_repo')
     end
 
     it 'installs the esl-erlang package' do
-     is_expected.to install_package('esl-erlang')
+      is_expected.to install_package('esl-erlang')
     end
   end
 
