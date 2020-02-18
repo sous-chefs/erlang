@@ -28,14 +28,14 @@ env:
   - CHEF_VERSION=14 INSTANCE=default-fedora-latest
   - CHEF_VERSION=14 INSTANCE=source-ubuntu-1604
   - CHEF_VERSION=14 INSTANCE=source-ubuntu-1804
-  - CHEF_VERSION=14 INSTANCE=source-debian-8
   - CHEF_VERSION=14 INSTANCE=source-debian-9
+  - CHEF_VERSION=14 INSTANCE=source-debian-10
   - CHEF_VERSION=14 INSTANCE=source-fedora-latest
   - CHEF_VERSION=14 INSTANCE=source-centos-7
   - CHEF_VERSION INSTANCE=default-ubuntu-1604
   - CHEF_VERSION INSTANCE=default-ubuntu-1804
-  - CHEF_VERSION INSTANCE=default-debian-8
   - CHEF_VERSION INSTANCE=default-debian-9
+  - CHEF_VERSION INSTANCE=default-debian-10
   - CHEF_VERSION INSTANCE=default-centos-6
   - CHEF_VERSION INSTANCE=default-centos-7
   - CHEF_VERSION INSTANCE=default-fedora-latest
