@@ -1,3 +1,4 @@
+---
 driver:
   name: vagrant
 
@@ -24,28 +25,28 @@ platforms:
     run_list: apt::default
 
 suites:
-- name: default
-  run_list:
-    - recipe[erlang]
+  - name: default
+    run_list:
+      - recipe[erlang]
 
-- name: gui_tools
-  run_list:
-    - recipe[erlang]
-  attributes:
-    erlang:
-      gui_tools: true
-  excludes:
-    - centos-6
-    - centos-7
-    - fedora-latest
+  - name: gui_tools
+    run_list:
+      - recipe[erlang]
+    attributes:
+      erlang:
+        gui_tools: true
+    excludes:
+      - centos-6
+      - centos-7
+      - fedora-latest
 
-- name: esl
-  run_list:
-    - recipe[erlang::esl]
-  excludes:
-    - fedora-latest
-    - opensuse-leap-15
+  - name: esl
+    run_list:
+      - recipe[erlang::esl]
+    excludes:
+      - fedora-latest
+      - opensuse-leap-15
 
-- name: source
-  run_list:
-    - recipe[erlang::source]
+  - name: source
+    run_list:
+      - recipe[erlang::source]
