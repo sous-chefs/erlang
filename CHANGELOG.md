@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Yamllint fixes
+- MDL fixes
 
 ## 8.0.0 (2019-10-07)
 
@@ -56,17 +57,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add of a new attribute toggling EPEL repo installation.
 
 ## 4.1.1 (2017-03-01)
+
 - Fix packaging issue related to nox package on Ubuntu 16.04+
 - Cookstyle fixes
 - Loosen up the yum dependency
 
 ## 4.1.0 (2016-12-22)
+
 - Replace BATS tests with InSpec
 - Fix package and source installs for Fedora and openSUSE
 - Update source version to 19.2
 - Improved version check for source install guard
 
 ## 4.0.0 (2016-09-16)
+
 - Testing updates
 - Remove traces of minitest handler from the code
 - Require Chef 12.1+ and use multipackage for installs
