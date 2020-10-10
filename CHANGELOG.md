@@ -18,6 +18,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Yamllint fixes
 - MDL fixes
 
+### Added
+
+- Add amazonlinux support to package recipe
+
 ## 8.0.0 (2019-10-07)
 
 - Resolve Cookstyle 5.8 warnings - [@tas50](https://github.com/tas50)

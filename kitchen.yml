@@ -45,6 +45,8 @@ suites:
       - recipe[erlang::esl]
     excludes:
       - fedora-latest
+      - amazonlinux
+      - amazonlinux-2
       - opensuse-leap-15
 
   - name: source
