@@ -13,12 +13,10 @@ verifier:
   name: inspec
 
 platforms:
-  - name: amazonlinux
-    driver_config:
-      box: mvbcoding/awslinux
+  - name: amazonlinux-2
   - name: centos-6
   - name: centos-7
-  - name: debian-10
+  - name: debian-9
   - name: debian-10
   - name: fedora-latest
   - name: opensuse-leap-15
@@ -46,7 +44,6 @@ suites:
       - recipe[erlang::esl]
     excludes:
       - fedora-latest
-      - amazonlinux
       - amazonlinux-2
       - opensuse-leap-15
 

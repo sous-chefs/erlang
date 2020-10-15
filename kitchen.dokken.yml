@@ -12,11 +12,6 @@ provisioner:
   name: dokken
 
 platforms:
-  - name: amazonlinux
-    driver:
-      image: dokken/amazonlinux
-      pid_one_command: /sbin/init
-
   - name: amazonlinux-2
     driver:
       image: dokken/amazonlinux-2
@@ -74,29 +69,3 @@ platforms:
     driver:
       image: dokken/opensuse-leap-15
       pid_one_command: /bin/systemd
-
-suites:
-  - name: default
-    run_list:
-      - recipe[erlang]
-
-  - name: gui_tools
-    run_list:
-      - recipe[erlang]
-    attributes:
-      erlang:
-        gui_tools: true
-    excludes:
-      - centos-6
-      - centos-7
-
-  - name: esl
-    run_list:
-      - recipe[erlang::esl]
-    excludes:
-      - fedora-latest
-      - opensuse-42
-
-  - name: source
-    run_list:
-      - recipe[erlang::source]
