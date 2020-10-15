@@ -33,9 +33,10 @@ suites:
     run_list:
       - recipe[erlang::esl]
     excludes:
-      - fedora-latest
       - amazonlinux-2
+      - fedora-latest
       - opensuse-leap-15
+      - ubuntu-20.04
 
   - name: source
     run_list:

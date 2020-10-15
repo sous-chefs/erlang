@@ -61,6 +61,8 @@ jobs:
             suite: esl
           - os: opensuse-leap-15
             suite: esl
+          - os: ubuntu-2004
+            suite: esl
       fail-fast: false
 
     steps:
