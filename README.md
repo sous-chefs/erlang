@@ -59,7 +59,7 @@ Installs Erlang from source.
 
 ### esl
 
-Adds Erlang Solutions' [package repositories] on Debian, CentOS (>5), and Fedora systems, and installs the `esl-erlang` package.
+Adds Erlang Solutions' [package repositories] on Debian, CentOS, and Ubuntu systems, and installs the `esl-erlang` package.
 
 [package repositories]: https://www.erlang-solutions.com/downloads/download-erlang-otp
 

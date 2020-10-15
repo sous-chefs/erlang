@@ -53,6 +53,13 @@ jobs:
           - 'default'
           - 'esl'
           - 'source'
+        exclude:
+          - os: amazonlinux-2
+            suite: esl
+          - os: fedora-latest
+            suite: esl
+          - os: opensuse-leap-15
+            suite: esl
       fail-fast: false
 
     steps:
