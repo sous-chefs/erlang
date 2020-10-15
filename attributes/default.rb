@@ -20,8 +20,8 @@
 
 default['erlang']['install_method'] = 'package'
 
-default['erlang']['source']['version'] = '19.2'
-default['erlang']['source']['checksum'] = 'a016b3ef5dac1e532972617b2715ef187ecb616f7cd7ddcfe0f1d502f5d24870'
+default['erlang']['source']['version'] = '23.1'
+default['erlang']['source']['checksum'] = 'cb5b7246eeaac9298c51c9915386df2f784e82a3f7ff93b68453591f0b370400'
 default['erlang']['source']['build_flags'] = ''
 default['erlang']['source']['cflags'] = ''
 

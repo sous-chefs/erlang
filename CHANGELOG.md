@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update README to sous-chefs
 - Update metadata.rb to Sous Chefs
 - Update test-kitchen to Sous Chefs
+- Update source version to 23.1
 
 ### Fixed
 
