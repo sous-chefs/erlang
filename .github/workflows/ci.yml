@@ -43,7 +43,6 @@ jobs:
           - 'amazonlinux-2'
           - 'debian-9'
           - 'debian-10'
-          - 'centos-6'
           - 'centos-7'
           - 'centos-8'
           - 'fedora-latest'
@@ -56,12 +55,10 @@ jobs:
           - 'esl'
           - 'source'
         exclude:
-          - os: centos-6
-            suite: gui_tools
           - os: centos-7
-            suite: gui_tools
+            suite: gui-tools
           - os: fedora-latest
-            suite: gui_tools
+            suite: gui-tools
           - os: fedora-latest
             suite: esl
           - os: opensuse-leap-15

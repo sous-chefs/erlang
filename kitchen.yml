@@ -14,7 +14,6 @@ verifier:
 
 platforms:
   - name: amazonlinux-2
-  - name: centos-6
   - name: centos-7
   - name: debian-9
   - name: debian-10
@@ -35,7 +34,6 @@ suites:
       erlang:
         gui_tools: true
     excludes:
-      - centos-6
       - centos-7
       - fedora-latest
 
