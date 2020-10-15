@@ -18,7 +18,6 @@
 # limitations under the License.
 #
 
-default['erlang']['gui_tools'] = false
 default['erlang']['install_method'] = 'package'
 
 default['erlang']['source']['version'] = '19.2'

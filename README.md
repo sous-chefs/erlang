@@ -32,7 +32,6 @@ This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of
 
 ## Attributes
 
-- `node['erlang']['gui_tools']` - whether to install the GUI tools for Erlang.
 - `node['erlang']['install_method']` - Erlang installation method ("package", "source", or "esl" (for Erlang Solutions packages)).
 - `node['erlang']['package']['version']` - OS specific version of Erlang package to install
 - `node['erlang']['package']['install_epel_repository']` - Boolean flag indicating whether EPEL yum repository should be installed (in which case Erlang packages may be retrieved from there).

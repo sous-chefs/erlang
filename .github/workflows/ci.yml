@@ -51,18 +51,8 @@ jobs:
           - 'opensuse-leap-15'
         suite:
           - 'default'
-          - 'gui-tools'
           - 'esl'
           - 'source'
-        exclude:
-          - os: centos-7
-            suite: gui-tools
-          - os: fedora-latest
-            suite: gui-tools
-          - os: fedora-latest
-            suite: esl
-          - os: opensuse-leap-15
-            suite: esl
       fail-fast: false
 
     steps:

@@ -28,16 +28,6 @@ suites:
     run_list:
       - recipe[erlang]
 
-  - name: gui_tools
-    run_list:
-      - recipe[erlang]
-    attributes:
-      erlang:
-        gui_tools: true
-    excludes:
-      - centos-7
-      - fedora-latest
-
   - name: esl
     run_list:
       - recipe[erlang::esl]

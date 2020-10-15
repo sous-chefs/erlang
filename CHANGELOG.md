@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Remove CentOS 6 support
+- Remove gui tools attribute and suites
 
 ## 8.0.0 (2019-10-07)
 
