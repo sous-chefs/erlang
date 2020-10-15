@@ -15,6 +15,7 @@ verifier:
 platforms:
   - name: amazonlinux-2
   - name: centos-7
+  - name: centos-8
   - name: debian-9
   - name: debian-10
   - name: fedora-latest
