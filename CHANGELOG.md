@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update test-kitchen to Sous Chefs
 - Update source version to 23.1
 - Exclude esl suite for a few platforms
+- Include saner cflags which are required
 
 ### Fixed
 

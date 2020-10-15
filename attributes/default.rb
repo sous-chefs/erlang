@@ -23,7 +23,7 @@ default['erlang']['install_method'] = 'package'
 default['erlang']['source']['version'] = '23.1'
 default['erlang']['source']['checksum'] = 'cb5b7246eeaac9298c51c9915386df2f784e82a3f7ff93b68453591f0b370400'
 default['erlang']['source']['build_flags'] = ''
-default['erlang']['source']['cflags'] = ''
+default['erlang']['source']['cflags'] = '-O2 -g'
 
 default['erlang']['esl']['version'] = nil
 default['erlang']['esl']['lsb_codename'] = node['lsb'] ? node['lsb']['codename'] : 'no_lsb'
