@@ -24,9 +24,10 @@
 case node['platform_family']
 when 'debian'
   package 'erlang-dev'
-
-when 'rhel', 'suse', 'fedora'
-  include_recipe 'yum-epel' if platform_family?('rhel') && node['erlang']['package']['install_epel_repository']
+when 'rhel', 'suse', 'fedora', 'amazon'
+  if platform_family?('rhel', 'amazon') && node['erlang']['package']['install_epel_repository']
+    include_recipe 'yum-epel'
+  end
 
   package 'erlang' do
     version node['erlang']['package']['version'] if node['erlang']['package']['version']

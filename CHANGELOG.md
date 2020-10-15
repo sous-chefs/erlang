@@ -2,6 +2,40 @@
 
 This file is used to list changes made in each version of the erlang cookbook.
 
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## Unreleased
+
+### Changed
+
+- Sous Chefs Adoption
+- Update Changelog to Sous Chefs
+- Update to use Sous Chefs GH workflow
+- Update README to sous-chefs
+- Update metadata.rb to Sous Chefs
+- Update test-kitchen to Sous Chefs
+- Update source version to 23.1
+- Exclude esl suite for a few platforms
+- Include saner cflags which are required
+
+### Fixed
+
+- Yamllint fixes
+- MDL fixes
+- Various fixes for Amazon Linux
+
+### Added
+
+- Add amazonlinux support to package recipe
+- Add CentOS 8 testing
+- Add Ubuntu 20.04 testing
+
+### Removed
+
+- Remove CentOS 6 support
+- Remove gui tools attribute and suites
+
 ## 8.0.0 (2019-10-07)
 
 - Resolve Cookstyle 5.8 warnings - [@tas50](https://github.com/tas50)
@@ -41,17 +75,20 @@ This file is used to list changes made in each version of the erlang cookbook.
 - Add of a new attribute toggling EPEL repo installation.
 
 ## 4.1.1 (2017-03-01)
+
 - Fix packaging issue related to nox package on Ubuntu 16.04+
 - Cookstyle fixes
 - Loosen up the yum dependency
 
 ## 4.1.0 (2016-12-22)
+
 - Replace BATS tests with InSpec
 - Fix package and source installs for Fedora and openSUSE
 - Update source version to 19.2
 - Improved version check for source install guard
 
 ## 4.0.0 (2016-09-16)
+
 - Testing updates
 - Remove traces of minitest handler from the code
 - Require Chef 12.1+ and use multipackage for installs

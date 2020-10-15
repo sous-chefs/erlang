@@ -1,51 +1,43 @@
+---
 driver:
   name: vagrant
 
 provisioner:
   name: chef_zero
+  product_name: chef
+  enforce_idempotency: true
+  multiple_converge: 2
   deprecations_as_errors: true
-  chef_license: accept-no-persist
+
+verifier:
+  name: inspec
 
 platforms:
-  - name: amazonlinux
-    driver_config:
-      box: mvbcoding/awslinux
-  - name: centos-6
+  - name: amazonlinux-2
   - name: centos-7
+  - name: centos-8
+  - name: debian-9
   - name: debian-10
-    run_list: apt::default
-  - name: debian-10
-    run_list: apt::default
   - name: fedora-latest
   - name: opensuse-leap-15
   - name: ubuntu-16.04
-    run_list: apt::default
   - name: ubuntu-18.04
-    run_list: apt::default
+  - name: ubuntu-20.04
 
 suites:
-- name: default
-  run_list:
-    - recipe[erlang]
+  - name: default
+    run_list:
+      - recipe[erlang]
 
-- name: gui_tools
-  run_list:
-    - recipe[erlang]
-  attributes:
-    erlang:
-      gui_tools: true
-  excludes:
-    - centos-6
-    - centos-7
-    - fedora-latest
+  - name: esl
+    run_list:
+      - recipe[erlang::esl]
+    excludes:
+      - amazonlinux-2
+      - fedora-latest
+      - opensuse-leap-15
+      - ubuntu-20.04
 
-- name: esl
-  run_list:
-    - recipe[erlang::esl]
-  excludes:
-    - fedora-latest
-    - opensuse-leap-15
-
-- name: source
-  run_list:
-    - recipe[erlang::source]
+  - name: source
+    run_list:
+      - recipe[erlang::source]
