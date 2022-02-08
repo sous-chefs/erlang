@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+- Remove delivery folder
+
 ## 8.1.3 - *2021-11-03*
 
 - Add CentOS Stream 8 to CI pipeline
