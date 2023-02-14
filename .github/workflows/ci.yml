@@ -40,21 +40,21 @@ jobs:
     strategy:
       matrix:
         os:
-          - 'amazonlinux-2'
-          - 'debian-9'
-          - 'debian-10'
-          - 'centos-7'
-          - 'centos-8'
-          - 'centos-stream-8'
-          - 'fedora-latest'
-          - 'ubuntu-1604'
-          - 'ubuntu-1804'
-          - 'ubuntu-2004'
-          - 'opensuse-leap-15'
+          - "amazonlinux-2"
+          - "debian-9"
+          - "debian-10"
+          - "centos-7"
+          - "centos-8"
+          - "centos-stream-8"
+          - "fedora-latest"
+          - "ubuntu-1604"
+          - "ubuntu-1804"
+          - "ubuntu-2004"
+          - "opensuse-leap-15"
         suite:
-          - 'default'
-          - 'esl'
-          - 'source'
+          - "default"
+          - "esl"
+          - "source"
         exclude:
           - os: amazonlinux-2
             suite: esl
@@ -70,9 +70,9 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
       - name: Install Chef
-        uses: actionshub/chef-install@main
+        uses: actionshub/chef-install@2.0.4
       - name: Dokken
-        uses: actionshub/test-kitchen@main
+        uses: actionshub/test-kitchen@2.1.0
         env:
           CHEF_LICENSE: accept-no-persist
           KITCHEN_LOCAL_YAML: kitchen.dokken.yml
@@ -82,6 +82,6 @@ jobs:
       - name: Print debug output on failure
         if: failure()
         run: |
-            set -x
-            sudo journalctl -l --since today
-            KITCHEN_LOCAL_YAML=kitchen.dokken.yml /usr/bin/kitchen exec ${{ matrix.suite }}-${{ matrix.os }} -c "journalctl -l"
+          set -x
+          sudo journalctl -l --since today
+          KITCHEN_LOCAL_YAML=kitchen.dokken.yml /usr/bin/kitchen exec ${{ matrix.suite }}-${{ matrix.os }} -c "journalctl -l"
