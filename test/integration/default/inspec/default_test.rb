@@ -1,5 +1,5 @@
 # this check works on all versions
-check = "erl -eval \'erlang:display(erlang:system_info(otp_release)), halt().\'  -noshell"
+check = "erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().'  -noshell"
 ver = command(check).stdout
 
 if ver =~ /R\d*B\d*/
