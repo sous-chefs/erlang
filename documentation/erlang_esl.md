@@ -6,23 +6,23 @@ Erlang Solutions discontinued prebuilt Erlang/OTP and Elixir binary packages on 
 
 ## Actions
 
-| Action | Description |
-|--------|-------------|
-| `:install` | Configures the Erlang Solutions repository and installs `esl-erlang`. |
-| `:remove` | Removes `esl-erlang` and the configured Erlang Solutions repository. |
+|Action|Description|
+|---|---|
+|`:install`|Configures the Erlang Solutions repository and installs `esl-erlang`.|
+|`:remove`|Removes `esl-erlang` and the configured Erlang Solutions repository.|
 
 ## Properties
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `package_name` | String | `esl-erlang` | ESL package name to install. |
-| `version` | String | `nil` | Optional package version to install and pin. |
-| `lsb_codename` | String | platform codename or version | Debian/Ubuntu distribution name for the APT repository. |
-| `apt_repo_uri` | String | `https://packages.erlang-solutions.com/debian/` | Erlang Solutions APT repository URI. |
-| `apt_repo_key` | String | `https://packages.erlang-solutions.com/debian/erlang_solutions.asc` | Erlang Solutions APT repository key URL. |
-| `yum_repo_baseurl` | String | `https://packages.erlang-solutions.com/rpm/centos/$releasever/$basearch` | Erlang Solutions YUM repository base URL. |
-| `yum_repo_gpgkey` | String | `https://packages.erlang-solutions.com/debian/erlang_solutions.asc` | Erlang Solutions YUM repository GPG key URL. |
-| `install_epel_repository` | true, false | `true` | Installs `epel-release` before configuring the repository on RHEL-family platforms. |
+|Property|Type|Default|Description|
+|---|---|---|---|
+|`package_name`|String|`esl-erlang`|ESL package name to install.|
+|`version`|String|`nil`|Optional package version to install and pin.|
+|`lsb_codename`|String|platform codename or version|Debian/Ubuntu distribution name for the APT repository.|
+|`apt_repo_uri`|String|`https://packages.erlang-solutions.com/debian/`|Erlang Solutions APT repository URI.|
+|`apt_repo_key`|String|`https://packages.erlang-solutions.com/debian/erlang_solutions.asc`|Erlang Solutions APT repository key URL.|
+|`yum_repo_baseurl`|String|`https://packages.erlang-solutions.com/rpm/centos/$releasever/$basearch`|Erlang Solutions YUM repository base URL.|
+|`yum_repo_gpgkey`|String|`https://packages.erlang-solutions.com/debian/erlang_solutions.asc`|Erlang Solutions YUM repository GPG key URL.|
+|`install_epel_repository`|true, false|`true`|Installs `epel-release` before configuring the repository on RHEL-family platforms.|
 
 ## Examples
 

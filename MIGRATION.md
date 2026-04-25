@@ -6,12 +6,12 @@ This cookbook has migrated from recipe and attribute driven installation to cust
 
 The main cookbook no longer ships `recipes/` or `attributes/`. Consumers should declare one of the custom resources directly from their own wrapper cookbook or role recipe.
 
-| Previous API | Replacement |
-|--------------|-------------|
-| `recipe[erlang]` with `node['erlang']['install_method'] = 'package'` | `erlang_package 'default'` |
-| `recipe[erlang::package]` | `erlang_package 'default'` |
-| `recipe[erlang::source]` | `erlang_source 'default'` |
-| `recipe[erlang::esl]` | `erlang_esl 'default'` |
+|Previous API|Replacement|
+|---|---|
+|`recipe[erlang]` with `node['erlang']['install_method'] = 'package'`|`erlang_package 'default'`|
+|`recipe[erlang::package]`|`erlang_package 'default'`|
+|`recipe[erlang::source]`|`erlang_source 'default'`|
+|`recipe[erlang::esl]`|`erlang_esl 'default'`|
 
 ## Package Installs
 
@@ -81,19 +81,19 @@ Erlang Solutions discontinued prebuilt Erlang/OTP and Elixir binary packages on 
 
 ## Property Mapping
 
-| Old attribute | New resource property |
-|---------------|-----------------------|
-| `node['erlang']['package']['version']` | `erlang_package.version` |
-| `node['erlang']['package']['install_epel_repository']` | `erlang_package.install_epel_repository` |
-| `node['erlang']['source']['version']` | `erlang_source.version` |
-| `node['erlang']['source']['url']` | `erlang_source.url` |
-| `node['erlang']['source']['checksum']` | `erlang_source.checksum` |
-| `node['erlang']['source']['build_flags']` | `erlang_source.build_flags` |
-| `node['erlang']['source']['cflags']` | `erlang_source.cflags` |
-| `node['erlang']['esl']['version']` | `erlang_esl.version` |
-| `node['erlang']['esl']['lsb_codename']` | `erlang_esl.lsb_codename` |
-| `node['erlang']['esl']['repo']['uri']` | `erlang_esl.apt_repo_uri` |
-| `node['erlang']['esl']['repo']['key']` | `erlang_esl.apt_repo_key` |
+|Old attribute|New resource property|
+|---|---|
+|`node['erlang']['package']['version']`|`erlang_package.version`|
+|`node['erlang']['package']['install_epel_repository']`|`erlang_package.install_epel_repository`|
+|`node['erlang']['source']['version']`|`erlang_source.version`|
+|`node['erlang']['source']['url']`|`erlang_source.url`|
+|`node['erlang']['source']['checksum']`|`erlang_source.checksum`|
+|`node['erlang']['source']['build_flags']`|`erlang_source.build_flags`|
+|`node['erlang']['source']['cflags']`|`erlang_source.cflags`|
+|`node['erlang']['esl']['version']`|`erlang_esl.version`|
+|`node['erlang']['esl']['lsb_codename']`|`erlang_esl.lsb_codename`|
+|`node['erlang']['esl']['repo']['uri']`|`erlang_esl.apt_repo_uri`|
+|`node['erlang']['esl']['repo']['key']`|`erlang_esl.apt_repo_key`|
 
 ## Platform Changes
 

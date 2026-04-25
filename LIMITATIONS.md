@@ -32,11 +32,11 @@
 
 ### Build Dependencies
 
-| Platform Family | Packages |
-|-----------------|----------|
-| Debian | `tar`, `libncurses-dev`, `openssl`, `libssl-dev` |
-| RHEL/Fedora/Amazon | `tar`, `ncurses-devel`, `openssl-devel` |
-| SUSE | `tar`, `ncurses-devel`, `libopenssl-devel` |
+|Platform Family|Packages|
+|---|---|
+|Debian|`tar`, `libncurses-dev`, `openssl`, `libssl-dev`|
+|RHEL/Fedora/Amazon|`tar`, `ncurses-devel`, `openssl-devel`|
+|SUSE|`tar`, `ncurses-devel`, `libopenssl-devel`|
 
 Erlang/OTP upstream documents source builds as supported on Unix/Linux systems with GNU make, gcc or clang, Perl 5, ncurses or equivalent development headers, sed, and an install program. OpenSSL development headers are required for `crypto`, `ssl`, and `ssh`.
 
