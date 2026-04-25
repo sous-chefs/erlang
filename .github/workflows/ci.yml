@@ -23,37 +23,26 @@ jobs:
     strategy:
       matrix:
         os:
-          - "amazonlinux-2"
-          - "debian-9"
-          - "debian-10"
-          - "centos-7"
-          - "centos-8"
-          - "centos-stream-8"
+          - "almalinux-8"
+          - "almalinux-9"
+          - "centos-stream-9"
+          - "debian-12"
+          - "debian-13"
           - "fedora-latest"
-          - "ubuntu-1604"
-          - "ubuntu-1804"
-          - "ubuntu-2004"
-          - "opensuse-leap-15"
+          - "rockylinux-8"
+          - "rockylinux-9"
+          - "ubuntu-2204"
+          - "ubuntu-2404"
         suite:
           - "default"
-          - "esl"
           - "source"
-        exclude:
-          - os: amazonlinux-2
-            suite: esl
-          - os: fedora-latest
-            suite: esl
-          - os: opensuse-leap-15
-            suite: esl
-          - os: ubuntu-2004
-            suite: esl
       fail-fast: false
 
     steps:
       - name: Check out code
         uses: actions/checkout@v6
-      - name: Install Chef
-        uses: actionshub/chef-install@6.0.0
+      - name: Install Cinc Workstation
+        uses: sous-chefs/.github/.github/actions/install-workstation@main
       - name: Dokken
         uses: actionshub/test-kitchen@3.0.0
         env:
