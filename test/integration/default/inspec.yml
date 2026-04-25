@@ -1,0 +1,7 @@
+---
+name: default
+title: Default Erlang Package Tests
+maintainer: Sous Chefs
+license: Apache-2.0
+summary: Verifies Erlang installs from distribution packages
+version: 1.0.0

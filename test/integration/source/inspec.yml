@@ -1,0 +1,7 @@
+---
+name: source
+title: Erlang Source Install Tests
+maintainer: Sous Chefs
+license: Apache-2.0
+summary: Verifies Erlang installs from upstream source
+version: 1.0.0

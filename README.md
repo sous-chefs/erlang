@@ -6,7 +6,7 @@
 [![OpenCollective](https://opencollective.com/sous-chefs/sponsors/badge.svg)](#sponsors)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Manages installation of Erlang via packages or source.
+Provides custom resources for installing Erlang via distribution packages, legacy Erlang Solutions packages, or source.
 
 ## Maintainers
 
@@ -16,52 +16,31 @@ This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of
 
 ### Platforms
 
-- Debian/Ubuntu 16.04+
-- RHEL/CentOS/Scientific/Amazon/Oracle 6+
+- AlmaLinux 8+
+- CentOS Stream 9+
+- Debian 12+
 - Fedora
-- openSUSE
+- Red Hat Enterprise Linux 8+
+- Rocky Linux 8+
+- Ubuntu 22.04+
 
 ### Chef
 
-- Chef 14+
+- Chef 15.3+
 
 ### Cookbooks
 
-- yum-epel
-- yum-erlang_solutions
+- apt
 
-## Attributes
+## Resources
 
-- `node['erlang']['install_method']` - Erlang installation method ("package", "source", or "esl" (for Erlang Solutions packages)).
-- `node['erlang']['package']['version']` - OS specific version of Erlang package to install
-- `node['erlang']['package']['install_epel_repository']` - Boolean flag indicating whether EPEL yum repository should be installed (in which case Erlang packages may be retrieved from there).
-- `node['erlang']['source']['version']` - Version of Erlang/OTP to install from source.
-- `node['erlang']['source']['url']` - URL of Erlang/OTP source tarball.
-- `node['erlang']['source']['checksum']` - Checksum of the Erlang/OTP source tarball.
-- `node['erlang']['source']['build_flags']` - Build flags for compiling Erlang/OTP.
-- `node['erlang']['source']['cflags']` - CFLAGS for configuring Erlang/OTP.
-- `node['erlang']['esl']['version']` - version specifier for Erlang Solutions packages.
-- `node['erlang']['esl']['lsb_codename']` - override the code name used for ESL packages, useful for installing the packages on distributions that they don't make specific packages available (e.g., maverick vs precise).
+- `erlang_package` - Installs Erlang from distribution packages.
+- `erlang_source` - Builds and installs Erlang/OTP from source.
+- `erlang_esl` - Installs Erlang from legacy Erlang Solutions repositories.
 
-## Recipes
+See the files in `documentation/` for full resource properties and examples.
 
-### default
-
-Manages installation of Erlang. Includes the package or source recipe depending on the value of `node['erlang']['install_method']`.
-
-### package
-
-Installs Erlang from distribution packages.
-
-### source
-
-Installs Erlang from source.
-
-### esl
-
-Adds Erlang Solutions' [package repositories] on Debian, CentOS, and Ubuntu systems, and installs the `esl-erlang` package.
-
-[package repositories]: https://www.erlang-solutions.com/downloads/download-erlang-otp
+See [MIGRATION.md](MIGRATION.md) for guidance on moving from the previous recipe and attribute API to custom resources.
 
 ## Contributors
 
