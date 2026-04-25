@@ -8,6 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Standardise files with files in sous-chefs/repo-management
 Standardise files with files in sous-chefs/repo-management
 
+## [9.0.0](https://github.com/sous-chefs/erlang/compare/v8.1.29...v9.0.0) (2026-04-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate to custom resources ([#133](https://github.com/sous-chefs/erlang/issues/133))
+
+### Features
+
+* migrate to custom resources ([#133](https://github.com/sous-chefs/erlang/issues/133)) ([854362e](https://github.com/sous-chefs/erlang/commit/854362e5b96a26e378c913c87b3a476d0d5249cf))
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#127](https://github.com/sous-chefs/erlang/issues/127)) ([d829566](https://github.com/sous-chefs/erlang/commit/d8295661b9e2b55b9bd9d58eb5bdf93b90aeb473))
+
 ## [8.1.29](https://github.com/sous-chefs/erlang/compare/8.1.28...v8.1.29) (2025-10-15)
 
 
