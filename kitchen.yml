@@ -49,9 +49,13 @@ x-verifiers:
 
 suites:
   - name: default
+    provisioner:
+      named_run_list: default
     run_list: *default_run_list
     verifier: *default_verifier
 
   - name: source
+    provisioner:
+      named_run_list: source
     run_list: *source_run_list
     verifier: *source_verifier
