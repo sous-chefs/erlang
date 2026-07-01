@@ -1,4 +1,15 @@
-# Limitations
+# AGENTS.md
+
+## Cookbook Purpose
+
+Provides resources to install Erlang from distro packages, Erlang Solutions packages, or source.
+
+## Agent Findings
+
+* This cookbook is in an incremental modernization pass. Preserve existing public recipes and attributes unless a later full migration is explicitly selected.
+* Dependency management should use `Policyfile.rb`; do not reintroduce Berkshelf.
+
+## Known Limitations
 
 ## Package Availability
 
